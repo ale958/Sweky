@@ -1,0 +1,126 @@
+<h2 class="page-header">Analisi Statica</h2>
+<h3>Definizione
+</h3>
+<p>
+Un software di buona qualità deve possedere tutte le caratteristiche previste e per determinare ciò deve essere verificato il possesso di determinate proprietà di costruzione, d'uso e di funzionamento.
+I costrutti(del linguaggio scelto) da utilizzare per adempiere a tali proprità vanno scelti in base al loro impatto in relazione al costo di verifica.
+<br/>
+<b><i>La verifica solo retrospettiva (a valle dello
+sviluppo) è inutile.</i></b>
+<br/>
+Poiché il costo di rilevazione e correzione di un errore cresce con il grado di sviluppo del prodotto, posticipare la verifica porta al raggiungimento della correttezza <i>by correction</i>, cosa inadeguata, mentre far accompagnare la produzione dalla verifica è un approccio costruttivo che porta alla correttezza della soluzione <i>by construction</i>.
+
+</p>
+<h4>Premesse all'analisi statica</h4>
+<p>
+Un aspetto da verificare nell'analisi statica è la presenza di <b>comportamenti predicibili</b> nel codice sorgente, che deve dunque evitare di avere ambiguità.
+Per ottenere ciò una stessa funzione non deve portare a risultati diversi a partire da invocazioni similari, l'andamento del programma non deve dipendere dall'ordine di elaborazione(attenzione ai thread) e 
+la modalità del passaggio dei parametri deve essere coerente con il comportamento atteso.
+</p>
+
+<p>
+La verificabilità di un programma dipende anche da scelte di strutturazione del codice,
+tenendo a mente che più grande è la dimensione del contesto(<i>scope e visibilità</i>) minore è la sua verificabilità, mentre la definzione di una buona architettura facilita la verifica.
+<br/>
+Per ottenere tale risultato è bene separare l'interfaccia dall'implementazione, massimizzare l'incapsulazione che aiuta a restringere lo scope e usare tipi specializzati per i dati tramite composizioni e specializzazioni.
+L'architettura creata va dunque seguita con attenzione durante la codifica.
+</p>
+<p>
+La dimostrazione della completezza e dell'economicità della soluzione viene supportata dal tracciamento,
+che deve essere altamente automatizzato e viene creato durante lo sviluppo(ramo discendente del modello a V)
+e serve poi durante ogni passaggio della verifica(ramo ascendente del modello a V).<br/>
+
+Per facilitare il tracciamento un buon stile di programmazione è assegnare a singoli moduli dei requisiti elementari poiché maggiore è l'astrazione 
+di un costrutto maggiore è la difficoltà di associarlo ad un requisito.
+</p>
+
+<h3>Inspection & Walkthrough</h3>
+<p>
+Si tratta di metodi pratici di analisi statica basati su lettura della documentazione del prodotto la cui 
+<a class="glossar" title="Efficacia" id="Efficacia" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Efficacia')" onclick="miao()">efficacia</a>
+dipende dall'esperienza dei verificatori nell'organizzare le <a class="glossar" title="Attività" id="Attività" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Attività')" onclick="miao()">attività</a> di verifica e nel documentarle con i risultati ottenuti.
+<br/>
+
+<br/>
+
+<b>Walkthrough</b> mira a rivelare la presenza di difetti tramite una lettura critica a largo spettro e senza assunzioni di alcun genere.
+Viene eseguita da ispettori e sviluppatori che nel caso del codice lo percorrono simulandone possibili esecuzioni.
+<br/>
+Prima di eseguire la lettura il Walkthrough va pianificato e inseguito alla lettura va discusso quanto individuato per correggere i difetti, documentando le attività svolte.
+
+<br/>
+<br/>
+
+<b>Inspection</b> mira a rivelare la presenza di difetti tramite una lettura mirata del prodotto da parte di verificatori distinti dai programmatori secondo una strategia che si focalizza sui punti ritenuti critici.
+<br/>
+A seguito della pianificazione, prima di procedere con la lettura, viene definita una lista di controllo sulla quale porre attenzione.
+Tale lista può derivare da conoscenze pregresse ottenute tramite walkthrough, motivo per cui i due metodi sono relativamente complementari.
+
+<br/>
+<br/>
+
+Le due metodologie sono entrambe dei controlli di tipo desk check, documentati formalmente e che coinvolgono programmatori e verificatori.
+Di contro, walkthrough richiede maggiore attenzione e un lavoro collaborativo, mentre inspection risulta più rapido ma si basa su errori presupposti e dunque può rilevare solo alcuni errori.
+</p>
+<h3>Tipi di analisi statica</h3>
+<p>
+L'analisi statica costruisce modelli astratti del SW in esame in cui ogni modello rappresenta un programma 
+come un grafo diretto e ne studia i possibili cammini mettendo etichette agli archi che descrivono proprietà sintattiche o semantiche dell'istruzione corrispondente.
+Ciascun flusso di controllo(thread) viene rappresentato separatamente assumendo che non interferisca con altri.
+<br/>
+
+Ci sono molti tipi di analisi statica:
+<br/>
+<br/>
+
+<b>1. Analisi di flusso di controllo</b><br/>
+Si accerta che il codice sia ben strutturato ed esegua nella sequenza specificata individuando eventuali punti di codice non raggiungibili o che portano a non terminazione.
+<br/><br/>
+
+<b>2. Analisi di flusso dei dati</b><br/>
+Si accerta che non esistano cammini d'esecusione associati a variabili prive di valore rilevando possibili anomalie nella consistenza dei dati.
+<br/><br/>
+
+<b>3. Analisi di flusso dell'informazione</b><br/>
+Determina quali dipendenze tra ingressi e uscite sono presenti durante l'esecuzione di un'<a class="glossar" title="Unità" id="Unità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Unità')" onclick="miao()">unità</a> di codice, accertandosi che siano corrispondenti a quelle previste dalla specifica.
+<br/><br/>
+
+<b>4. Esecuzione simbolica</b><br/>
+Verifica proprietà del programma mediante
+manipolazione algebrica del codice sorgente combinando le tre tecniche precedenti e effettuando sostituzioni inverse in cui gli output sono in funzione degli input.
+<br/><br/>
+
+<b>5. Verifica formale del codice</b><br/>
+Fornisce le prove di correttezza del codice sorgente rispetto alla specifica dei requisiti eventualmente in modo parziale suppondendo determinate pre e post condizioni.
+<br/><br/>
+
+<b>6. Analisi di limite</b><br/>
+Verifica che i dati non sforino i limiti imposti dalla precisione del loro tipo.
+<br/><br/>
+
+<b>7. Analisi uso dello stack</b><br/>
+Determina la massima richiesta di stack relativa ad un'esecuzione del programma in relazione con
+la dimensione dell’area di memoria
+assegnata al processo, assicurandosi che non ci sia collisione tra <i>stack</i> e <i>heap</i>.
+<br/><br/>
+
+<b>8. Analisi temporale</b><br/>
+Analizza le dipendenze temporali richieste da diverse parti del programma.
+
+<br/><br/>
+
+<b>9. Analisi d'interferenza</b><br/>
+Assicura l'assenza di side-effect da parte di parti separate del sistema.
+<br/><br/>
+
+<b>10. Analisi del codice oggetto</b><br/>
+Assicura che il codice oggetto sia una corretta traduzione del codice sorgente corrispondente e che non siano stati introdotti errori dal compilatore.
+</p>
+<br/><br/>
+
+
+<script>
+					$(function(){
+						$("[data-toggle=popover]").popover();
+					});
+</script>

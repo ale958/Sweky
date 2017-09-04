@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>SWEky - La wiki di SWE</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js'></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+     <link rel='stylesheet prefetch' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+	
+  <link rel="shortcut icon" type="image/x-icon" href="./img/favicon.png">
+	  <script>
+		$(function () {
+			$( "#wrapper" ).load( 'commonBody.html', function() {
+				$( "#glossario" ).attr("href", "#");
+			  	getGlossario();  $.getScript( "js/index.js");
+			});
+		});
+		function sortFunction(a, b) {
+			return (a.word).localeCompare(b.word);
+		}
+		function getGlossario() {
+			$('#contento').append('<h2 class="page-header">Glossario</h2>');
+			
+                   
+							$.getJSON('./src/glossary.json', function(json) {
+								let curLetter='Z';
+								let rowNum=1;
+								let tabNum=1;
+								let mydiv='';
+                                let arr = $.map(json, function(el) { return el });
+                                arr.sort(sortFunction);
+
+								for(i=0; i<arr.length; i++) {
+									if((arr[i].word).charAt(0) != curLetter) {
+										if(mydiv!='') 
+											mydiv+='</div> </div> </div>';
+										curLetter=(arr[i].word).charAt(0);
+										mydiv+='<div class="panel-group">    <div class="panel panel-default">       <div id="'+curLetter+'" class="panel-heading" data-toggle="collapse" href="#collapse'+tabNum+'"> <h3 class="panel-title">'+curLetter+'</h3> </div> <div id="collapse'+tabNum+'" class="panel-collapse collapse"> <dl class="list-group">'
+										rowNum=1;
+										tabNum++;
+									}
+
+									if(rowNum%2==0) {
+										mydiv+='<span class="list-group-item evenRow">'
+									}
+									else mydiv+='<span class="list-group-item">'
+									mydiv+='<dt>'+arr[i].word+'</dt>';
+									mydiv+='<dd>'+arr[i].definition+'</dd></span>';
+									rowNum++;
+								};
+								mydiv+='</div> </div> </div>';
+								let html = $.parseHTML( mydiv );
+		 
+								$('#contento').append( html );
+							});
+					}
+	
+	</script> 
+
+	<style>
+		#glossario{ background-color:#47ADA3; font-weight: bold; } 
+	</style>
+</head>
+
+	<body>
+	    
+      <div id="wrapper">      
+		
+
+	  </div>
+	</body>
+</html>

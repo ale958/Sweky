@@ -1,0 +1,135 @@
+<h2 class="page-header">Metodi e obiettivi di quantificazione</h2>
+<h3>Definizione</h3>
+<p>
+In un progetto c'è l'esigenza di effettuare delle misure al fine di avere dati affidabili su cui creare dei modelli di miglioramento tramite risultati oggettivi che implicano che la misura deve essere <b>ripetibile</b>, <b>confrontabile</b> e possedere una certa <b>confidenza</b> entro limiti di approssimazione.
+<br/>
+In particolare una misura è il risultato di una misurazione che è il processo che assegna numeri o simboli ad attributi di entità del mondo reale per descriverli tramite regole definite.
+<br/>
+L'insieme di regole che fissa le entità da misurare, gli attributi rilevanti, l’unità
+di misura, la <a class="glossar" title="Procedura" id="Procedura" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Procedura')" onclick="miao()">procedura</a> per assegnare e interpretare i valori si chiama <b>metrica</b>.
+Viene definita da IEEE come:
+
+</p>
+<blockquote>
+La misura quantitativa del grado di possesso di uno specifico
+attributo da parte di un sistema, componente, processo
+	<footer>Glossario IEEE</footer>
+</blockquote>
+
+<p>
+
+Le metriche identificano degli attributi, interni o esterni, misurabili
+determinando indicatori per le caratteristiche non misurabili.
+Gli attributi interni sono legati a misurazioni rispetto alle entità(codice sorgente), mentre quelli esterni sono relativi all'ambiente(qualità esterna, di prodotto).
+<br/>
+Le metriche si configurano dunque come strumenti di valutazione per valutare la qualità di processi e prodotti, effettuare stime, preventivi e consuntivi sui progetti e per capire il consumo di risorse.
+
+<br/>
+<b><i>
+Valori negativi riscontrati nelle metriche non devono portare ad azioni correttive impulsive ma è bene ricordare che ogni correzione deve essere analizzata per massimizzare il rapporto tra benefici e costi tramite <a class="glossar" title="Gestione dei cambiamenti" id="Gestione dei cambiamenti" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Gestione dei cambiamenti')" onclick="miao()">gestione dei cambiamenti</a>.
+</i></b>
+
+</p>
+
+<h3>Obiettivi</h3>
+<blockquote>
+If you cannot measure it, you cannot improve it
+	<footer>Lord William Thomson Kelvin (1824-1907)</footer>
+</blockquote>
+<p>
+Una metrica ha l'obiettivo far emergere tendenze e attuare azioni migliorative, questo ha senso solo se ciò viene colto tempestivamente, o meglio, in modo proattivo.
+<br/>
+Il processo di misurazione deve essere disciplinato secondo delle strategie e a supporto di ciò è definito lo standard 
+ISO/IEC 15939 che fornisce un modello delle misurazioni da produrre e delle relazioni tra esse, descrivendone il processo di misurazione.
+Questo standard afferma che i bisogni informativi sono basati su obiettivi, vincoli, rischi e problemi che hanno origine dai processi tecnici e di gestione.
+</p>
+<img src="./img/iso15939.jpg" width="80%" style="margin-left: 10%;">
+<br/>
+<p>
+Il modello fornito dallo standard può essere ad esempio istanziato con CMMI determinando la divisione dei bisogni in varie aree:
+</p>
+<ul>
+<li>gestione dei requisiti;</li>
+
+<li>progettazione e implementazione;</li>
+
+<li>verifica e validazione;
+</li>
+
+<li>quality assurance;</li>
+
+<li>gestione della configurazione;
+</li>
+
+<li>gestione di progetto;
+</li>
+
+<li>analisi dei rischi e analisi delle decisioni;</li>
+<li>allenamento.</li>
+</ul>
+<p>
+In alternativa alle tipologie tecniche di metriche si possono definire delle metriche funzionali, secondo ISO/IEC 14143 che hanno lo scopo di valutare oggettivamente le funzionalità del sw, utili come vista esterna per stimare il prezzo di vendita.
+
+</p>
+
+<h3>Le nostre metriche</h3>
+<p>Le seguenti categorie di metriche non hanno origine formale.
+Sono state inserite le metriche che abbiamo usato durante lo svolgimento del progetto didattico o che riteniamo di particolare interesse.
+<br/>
+<i>(Davvero? Mah)</i>
+</p>
+
+<h4>Metriche per l'analisi</h4>
+<p>
+Sono metriche utili ad assicurarsi che l'analisi dei requisiti svolta sia consistente nel tempo.
+Un esempio di tale metrica può essere il <b>Requirement stability index(RSI)</b> che misura la variazione dei requisiti nel tempo.
+</p>
+
+<h4>Metriche progettuali(architetturali)</h4>
+<p>
+Sono metriche utili per assicurare una buona architettura software, che rispetti le qualità desiderabili come basso <a class="glossar" title="Accoppiamento" id="Accoppiamento" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Accoppiamento')" onclick="miao()">accoppiamento</a>, riusabilità e <a class="glossar" title="Manutenibilità" id="Manutenibilità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Manutenibilità')" onclick="miao()">manutenibilità</a>.
+<br/>
+Esempi di tale metriche sono:
+
+</p>
+<ul>
+<li><b>Instability</b>: è data da un rapporto tra accoppiamento efferente(fan-out) e accoppiamento afferente(fan-in), tale metrica indica la possibilità di effettuare modifiche ad una componente del package senza influenzarne altri;</li>
+<li><b>Grado di <a class="glossar" title="Coesione" id="Coesione" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Coesione')" onclick="miao()">coesione</a></b>: è quanto sono coese le funzionalità all'interno di una classe o di un modulo, un grado alto di coesione spesso deriva da una componente con fan-in elevato;</li>
+<li><b>Grado di accoppiamento</b>: è quanto un modulo è dipendente da altre componenti del sistema, un grado alto di accoppiamento è sintomo di fan-out elevato.</li>
+
+</ul>
+<h4>Metriche software</h4>
+<p>
+Sono metriche per misurare le qualità interne del codice sorgente, sia per quanto riguarda le dimensioni sia per quanto riguarda la complessità.
+</p>
+<ul>
+<li><b>SLOC</b>: è il numero di linee di codice sorgente e serve per misurare la dimensione del prodotto sw;</li>
+<li><b>Average Cyclomatic Complexity
+</b>: analizza i possibili cammini indipendenti all'interno di un singolo sottoprogramma fornendo un valore che va confrontato a soglie prefissate. Il suo valore corrisponde al numero di casi di test necessari, in media, per verificare ogni possibile esito dei rami decisionali misurando la complessità del flusso di controllo.</li>
+<li><b>Weighted Method
+Complexity</b>: misura la somma pesata dei metodi di una classe, dove
+il peso di un metodo è dato dalla sua complessità ciclomatica, tale metrica se si attesta su valori bassi garantisce
+una buona riusabilità dei metodi;
+</li>
+<li><b>Nested Block Depth
+</b>: misura il massimo numero di livelli di annidamento
+delle strutture di controllo nei metodi;</li>
+<li><b>Copertura
+del codice</b>: misura la percentuale di codice coperto da test secondo uno degli approcci descritti nell'<a href="./AnalisiDinamica.html#copertura">analisi dinamica</a>.</li>
+
+</ul>
+
+<h4>Metriche per la gestione di progetto</h4>
+<p>
+Sono metriche per misurare la gestione di risorse legate al progetto.
+</p>
+<ul>
+<li><b>Budget variance</b>: misura la differenza tra i costi preventivati e quelli fin'ora sostenuti;</li>
+<li><b>Schelude variace</b>: misura la differenza tra il tempo attualmente speso rispetto a quello preventivato;</li>
+<li><b>Lead time</b>: misura il tempo di calendario che intercorre tra l'ordine di un ticket e la sua consegna.</li>
+</ul>
+<script>
+	$(function(){
+		$("[data-toggle=popover]").popover();
+	});
+</script>

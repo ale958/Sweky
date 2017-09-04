@@ -1,0 +1,198 @@
+<h2 class="page-header">Analisi Dinamica</h2>
+<h3>Definizione</h3>
+
+<p>
+L'analisi dinamica è l'esecuzione di test(prove) che verificano il comportamento dinamico del programma in alcune sue esecuzioni, quindi avviene definendo un insieme finito di casi ciascuno dei quali prevede alcuni valori di ingresso e assume uno stato iniziale del sistema.
+Dato che il dominio di tutte le esecuzioni possibili tende all'infinito i test non garantiscono l'esaustività e infatti un test cerca di produrre un esito decidibile(oracolo) da verificare rispetto al comportamento atteso.
+<br/>
+Dunque l'analisi dinamica può rilevare la presenza di malfunzionamenti ma non può dimostrarne l'assenza.
+</p>
+
+<blockquote>
+Una prova è il processo di eseguire un programma con
+l’intento di trovarvi difetti.
+<footer>
+The Art of Software Testing, G.J. Myers, Wiley-Interscience, 1979
+</footer>
+</blockquote>
+
+<p>
+<b>L'analisi dinamica produce una misura della qualità del sistema.</b>
+<br/>
+L'<a class="glossar" title="Attività" id="Attività" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Attività')" onclick="miao()">attività</a> di testing è parte essenziale del processo di verifica e come tale va pianificata nelle varie forme non appena possibile, seguendo come riferimento il modello a V, a monte della codifica.
+È importante avere una visione lungimirante delle esigenze legate ad essa, tenendone conto durante la progettazione del sistema.
+<br/>
+I test vanno eseguiti in parallelo all'attività di codifica e non solamente al suo termine.
+<br/>
+I test sono onerosi in quanto richiedono molte risorse umane e infrastrutturali, necessitano di processi definiti e richiedono attività di ricerca, analisi e correzione.
+</p>
+<p>
+Ciò che cerchiamo tramite test sono <b><i>failure</i></b> (malfunzionamenti).
+Un malfunzionamento si verifica quando il comportamento del sistema non corrisponde a quello atteso.
+Un malfunzionamento ha origine da un <b><i>error</i></b>
+(errore) che è un problema interno al sistema e a sua volta la sua causa meccanica, algoritmica o concettuale deriva da un <b><i>fault</i></b>(guasto).
+<br/>
+Gli errori sono dunque stati del sistema mentre i guasti ne sono la causa. I sistemi si possono vedere come composizioni gerarchiche di sottosistemi, per cui malfunzionamento di una componente interna può scatenare un guasto per le componenti di più alto livello.
+
+</p>
+
+<img src="./img/erroracci.jpg" width="80%" style="margin-left: 10%;">
+
+<h3>Strategie</h3>
+<p>
+La strategia nel definire le prove punta a perseguire la quantità minima di test sufficienti a fornire certezza adeguata sulla qualità del prodotto, sfruttando la quantità di sforzo, tempo e risorse allocate per la verifica.
+<br/>
+Lo sforzo non deve comunque essere eccessivo poiché per la legge del rendimento decrescente superata una certa soglia di risorse impiegate, il loro rapporto con i benifici ottenuti non è vantaggioso.
+<br/>
+<br/>
+Dei <b>criteri</b> guida da seguire nella definizione dei test riguardano la classificazione dell'obiettivo della prova, che va specificata per ogni caso di test in termini precisi e quantitativi e va inserita nel <b>Piano di Qualità</b> e
+la definizione di prove che devono essere ripetibili poiché la loro esecusione va effettuata più volte durante l'integrazione di più componenti.
+<br/>
+Va comunque ricordato che secondo il teorema di Howden non esiste un algoritmo che dato un programma ne individui un set di test finito e ideale.
+</p>
+
+<h3>Test</h3>
+<p>
+Come già specificato un test ha lo scopo di far fallire il programma e quando ci riesce deve essere aggiunto quel caso di test alla suite di test del progetto in modo permanente.
+I test non sono sostituitivi delle specifiche del programma,
+ma i loro oracoli andrebbero inseriti come commento nel codice in modo da utilizzarli come "contratti" di metodo.
+<br/>
+Una strategia di testing deve prevedere un processo di testing riproducibile e valutabile oggettivamente tramite criteri definiti.
+Una strategia di testing è tanto più buona tanti più malfunzionamenti individua in un dato lasso di tempo.
+
+</p>
+<p>
+La definizione di un <b>caso di prova</b> prevede la specifica di tre elementi: dati in ingresso, dati in uscita e l'ambiente d'esecuzione che comprende anche l'oggetto della prova.
+Per un progetto vengono definite delle <b>batterie di prove</b> che sono un insieme di casi di prova.
+<br/>
+La prova nel suo complesso consiste nell'eseguire una batteria di prove secondo una <b><a class="glossar" title="Procedura" id="Procedura" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Procedura')" onclick="miao()">procedura</a> di prova</b>
+che è il procedimento, possibilmente automatizzato,
+per eseguire,
+registrare, analizzare e valutare i risultati di prove.
+<br/>
+<br/>
+A supporto dell'analisi dinamica vengono usati tre strumenti:
+</p>
+<ul>
+<li><b>driver</b>: componente attiva che ha il controllo sull'esecuzione dei test, si occupa di richiamare le funzionalità da testare senza bisogno di richiamare in modalità diretta la funzione da testare;</li>
+
+<li><b>stub</b>: componente passiva che simula una parte del sistema non oggetto di test ma necessaria per svolgere il test, può essere utile per simulare parti del sistema non ancora codificate; </li>
+
+<li><b>logger</b>: componente non intrusivo che registra l'esito della prova su un file.</li>
+</ul>
+<p>
+Per convalidare i risultati ottenuti dai test si usano degli oracoli che generano a priori i risultati attesi, generalmente applicati da agenti automatici per velocizare e rendere oggettiva la convalida.
+</p>
+<p>
+I test sono definiti e successivamente eseguiti in ordine preciso definito dal modello a V.
+</p>
+
+<img src="./img/modellovDinamico.jpg" width="80%" style="margin-left: 10%;">
+
+<h4>Test di unità</h4>
+<p>
+I test di <a class="glossar" title="Unità" id="Unità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Unità')" onclick="miao()">unità</a> si occupano di testare le unità software e i relativi moduli e vanno definiti durante la progettazione di dettaglio.
+Circa i 2/3 dei difetti trovati dall'analisi dinamica derivano da questa tipologia di test.
+<br/>
+I test di unità possono essere funzionali(black-box) che facendo riferimento alla specifica dell'unità utlizzano dei dati in ingresso che portino ad un dato comportamento funzionale.
+Per la scelta dei dati in ingresso vengono definite delle classi di equivalenza che raggruppino insiemi di dati che porterebbero al medesimo comportamento.
+<br/>
+
+Da soli i test funzionali non bastano per accertare la correttezza della logica interna e vengono dunque affiancati da test struttrali(white-box).
+Questi test verificano la logica interna dell'unità cercando di percorrere ogni cammino di esecuzione interno al modulo(massima copertura) e la loro esecuzione può essere facilitata dall'uso di debugger.
+<br/>
+Il testing di unità è completo quando tutte le unità sono state verificate e può portare a diversi livelli di copertura spiegati successivamente.
+</p>
+
+<h4>Test di integrazione</h4>
+<p>
+I test di integrazione si applicano per testare la corretta interazione tra le componenti del sistema.
+Essi vengono definiti durante la progettazione architetturale e si basano sui componenti in essa specificati.
+<br/>
+Per definire i test di integrazione è necessario selezionare
+quali funzionalità integrare individuandone le componenti coinvolte e ordinandole per dipendenze crescenti.
+<br/>
+I problemi rilevati dai test di integrazione rappresentano difetti di progettazione o una scarsa qualità dei test di unità.
+Il numero dei test di integrazione è il necessario per accertare che i dati scambiati tra interfacce siano conformi e che i flussi di controllo siano tutti testati e funzionanti.
+</p>
+<p>
+L'integrazione delle componenti può avvenire assemblando prima i componenti produttori e poi i consumatori, in modo da verificare che i primi forniscano un flusso di controllo e di dati corretto ai secondi; 
+in alternativa si procede assemblando le parti in modo che ogni passo sia reversibile; l'ultimo approccio è incrementale e prevede l'aggiunta ad insiemi già ben verificati, motivo per cui eventuali difetti sono probabilmente da attribuire alle ultime parti aggiunte.
+<br/>
+Nell'integrazione incrementale si può procedere con modalità <b>bottom-up</b> decidendo di integrare prima le parti con minore dipendenza funzionale e maggiore utilità.
+In questo modo sono necessari meno <i>stub</i> ma si arriva tardi alle funzionalità di alto livello.
+In alternativa con l'approccio <b>top-down</b> si parte dalle parti più esterne utilizzando molti <i>stub</i> per simulare le componenti mancanti, integrando cosi subito le funzionalità di alto livello.
+</p>
+
+<h4>Test di sitema</h4>
+<p>
+I test di sistema sono test funzionali e verificano il comportamento dinamico del sistema nel suo complesso rispetto ai requisiti individuati.
+Essi vengono definiti durante l'analisi dei requisiti ma hanno inizio solo con il completamento dei test di integrazione.
+</p>
+
+<h4>Test di validazione</h4>
+<p>
+I test di validazione(accettazione/collaudo) acccertano il soddisfacimento dei requisiti richiesti dal proponente.
+
+Essi possono essere definiti già a partire dal capitolato.
+
+</p>
+
+<h4>Test di regressione</h4>
+<p>
+I test di regressione prevedono la ripetizione selettiva di test di integrazione ed eventualmente di sistema al fine accertare che eventuali modifiche derivanti da correzioni o estensioni del sistema non abbiano introdotto errori. <br/>
+Essi vanno decisi nel
+momento in cui si approvano modifiche al SW ma vanno eseguiti solo in seguito al superamento dei test di unità legati alle componenti coinvolte.
+</p>
+
+<h3 id="copertura">Copertura</h3>
+<p>
+I test di unità portano ad avere una determinata copertura 
+del codice sorgente.
+<br/>
+La copertura può essere <b>funzionale</b> se cerca la percentuale di funzionalità richieste effettivamente testate o <b>strutturale</b> se cerca la percentuale di logica interna testata.
+
+<br/>
+La copertura va massimizzata ma seguendo un criterio di copertura in base a quante risorse si vogliono impiegare per i test.
+Va comunque ricordato che una copertura del 100% non garantisce assenza di difetti e a volte non è raggiungibile per problemi come: costi eccessivi, codice sorgente non disponibile e codice irraggiungibile ma non eliminabile.
+
+<br/>
+<br/>
+
+<b>Function coverage</b><br/>
+Controlla quante funzioni(sotto-procedure) sono state eseguite.
+<br/>
+<br/>
+<b>Statement coverage</b><br/>
+Controlla quante istruzioni sono state eseguite nel corso dell'esecuzione di vari cammini del programma.
+(num. righe codice)
+<br/>
+<br/>
+<b>Branch coverage</b><br/>
+Controlla quanti rami distinti d'esecuzione del programma sono stati eseguiti.
+La branch coverage è più potente della statement coverage in quanto testa per ogni istruzione condizionale entrambi i casi anche se ciò non porta ad esaminare un numero maggiore di linee di codice.
+(i.e. rami if senza else che lo statement coverage può testare solo con la condizione true)
+<br/>
+
+<br/>
+<b>Condition coverage</b><br/>
+Controlla quanti valori possibili di espressioni logiche sono stati effettivamente testati.
+È la più stringente in quanto non basta testare la decisione finale di un'espressione condizionale ma obbliga anche a testare ogni decisione atomica al suo interno(condizione).
+Spesso massimizzare questa tipologia di coverage diventa troppo oneroso.
+<br/>
+Una via di mezzo tra condition e branch coverage è la <b>Modified Decision Condition Coverage</b> che non testa ogni singola condizione ma garantisce che ogni possibile output ottenibile a seguito di una decisione sia coperto da test.
+</p>
+
+<h3>Maturità di prodotto</h3>
+<p>
+Tramite l'analisi dinamica si può stimare il grado di evoluzione del prodotto, analizzando quanto esso migliora in seguito alle prove, quanto la densità dei difetti residui diminuisce e quanto può costare la scoperta di ulteriori difetti.
+<br/>
+Per perseguire la maturità di prodotto è sconsigliato l'uso di tecniche empiriche come <i>code-n'-fix</i>,
+ma è ideale definire un modello per questa stima.
+Due modelli standard sono quello base e quello logaritmico; il primo prevede un numero di difetti del SW stimato come costante iniziale mentre il secondo assume che le modifiche successive possano introdurre difetti.
+</p>
+<script>
+					$(function(){
+						$("[data-toggle=popover]").popover();
+					});
+</script>

@@ -1,0 +1,96 @@
+{
+   "glossary":[
+      {
+         "word":"Servizio",
+         "definition":"Mezzo per aiutare l'utente a raggiungere i suoi obiettivi riducendo costi e rischi, ad esempio abattendo le attività non produttive. L'amministratore deve occuparsi dell'erogazione dei servizi di supporto come la fornitura di strumenti adeguati." 
+      },
+      {
+         "word":"Efficacia",
+         "definition":"Grado di conformità del prodotto rispetto alle norme vigenti e agli obiettivi prefissati. Per perseguire una buona efficacia è necessario impiegare sufficienti risorse. La strategia con la quale il fornitore garantisce la conformità viene fissato nel Piano di Qualifica." 
+      },
+      {
+         "word":"Efficienza",
+         "definition":"Raggiungere gli obiettivi prefissati perseguendo una strategia di risparmio delle risorse (tempo e persone) a disposizione. È inversamente proporzionale alla quantità di risorse impiegate per le attività richieste e quindi è un indicatore quantitativo di quanto sto consumando." 
+      },
+      {
+         "word":"Attività",
+         "definition":"Insieme di procedure per compiere un compito specifico relativo ad un determinato processo. Vengono svolte tramite tecniche applicate agli strumenti a disposizione." 
+      },
+      {
+         "word":"Manutenibilità",
+         "definition":"È una caratteristica dell'architettura software che può essere raggiunta tramite l'applicazione di alcune best practice come uso dei principi SOLID; spesso una buona manutenibilità è conseguenza di una definizione di componenti coese e riutilizzabili." 
+      },
+      {
+         "word":"Stakeholder",
+         "definition":"Insieme dei portatori di interessi, ossia le persone che a vario titolo sono coinvolte nel ciclo di vita del software avendo influenza sul prodotto o sul processo." 
+      },
+      {
+         "word":"Fallimento",
+         "definition":"Un esempio noto di fallimento è la vita di Carlo" 
+      },
+      {
+         "word":"Coesione",
+         "definition":"Definizione specifica di componenti che presentano correlazione tra loro. La coesione va massimizzata e l'approccio OO aiuta a raggiungere coesione tramite l'applicazione dei principi SOLID. La coesione può essere funzionale se due parti concorrono al medesimo compito, sequenziale se adiacenti per ordine di esecuzione oppure informativa se le parti agiscono sulla stessa unità di informazione." 
+      },
+      {
+         "word":"Integrazione continua",
+         "definition":"È una pratica che consiste nell'allineare frequentemente lo stato dell'ambiente di lavoro condiviso, controllando che le modifiche apportate non vadano ad intaccare la baseline tramite la definizione di test automatici eseguiti ad ogni commit(Jenkins)." 
+      },
+      {
+         "word":"Milestone",
+         "definition":"Una milestone indica un traguardo con particolare valore strategico nel tempo che può derivare da un obbligo contrattuale oppure da un'opportunità decisa dal gruppo. Le milestone sono associate all'allineamento di un insieme di baseline; una milestone di qualità è delimitata per ampiezza, incrementale, misurabile, raggiungibile e dimostrabile agli stakeholders." 
+      },
+      {
+         "word":"Baseline",
+         "definition":"Base verificata, approvata e garantita di un insieme di CI dalla quale non si può retrocedere e sulla quale baserò il prossimo incremento. Una baseline è collocata in un repository. " 
+      },
+      {
+         "word":"Procedura",
+         "definition":"È una sequenza di azioni che seguita porta alla certezza del raggiungimento di un obiettivo." 
+      },
+      {
+         "word":"Stile architetturale",
+         "definition":"È una collezione di decisioni architettuali prefessitate applicabile ad un determinato contesto di sviluppo ad alto livello, eventualmente influenzando dettagli di architettura di grado più fine. Seguire uno stile architetturale porta in genere a determinate buone qualità nel sistema." 
+      },
+      {
+         "word":"Accoppiamento",
+         "definition":"È il grado di dipendenza tra due parti del sistema, è misurabile interpretando le componenti di un sistema come i nodi di un grafo orientato dove gli archi sono dipendenze. Una buona architettura prevede un grado di accoppiamento basso." 
+      },
+      {
+         "word":"Gestione dei cambiamenti",
+         "definition":"Valutazione di approvare dei cambiamenti proposti da membri del gruppo valutando costi e benefici che andrebbe ad apportare il cambiamento." 
+      },
+      {
+         "word":"Sistema Gestione Qualità",
+         "definition":"È una funzione aziendale garantisce il perseguimento della qualità per tutti i settori aziendali. Per fare ciò crea una strategia aziendale tramite il manuale di qualità e definendo una strategia specifica per il progetto nel piano di qualità." 
+      },
+      {
+         "word":"Unità",
+         "definition":"È un insieme di uno o più moduli(componenti elementari) individuati nella defizioni di un'architettura software come più piccola parte su cui effettuare test. Un'unità si occupa di soddisfare uno o più requisiti(meglio pochi)." 
+      },
+      {
+         "word":"Versionamento",
+         "definition":"È un'attività definita dal controllo di configurazione, cioè le modalità in cui un sistema complesso viene gestito per mettere in sicurezza le baseline e consentire il ritorno a versioni pecedenti. In particolare il versionamento consente tramite un repository di contenere tutti i CI di ogni baseline e la loro storia completa. Una procedura a supporto del versionamento è il commit che qeuivale al tracciamento del completamento di un task a fronte della sua integrazione sul repository." 
+      },
+      {
+         "word":"Configuration Item",
+         "definition":"Rappresenta un singolo elemento sottoposto ad attività di gestione di configurazione. Ogni CI è associato ad un'identità univoca determinata da: id, nome, data, autore, registro modifiche e stato corrente." 
+      },
+      {
+         "word":"Fase",
+         "definition":"È la durata temporale entro uno stato del ciclo di vita o in una trasazione tra essi, durante la quale si svolgono specifiche e univoche attività. Per tale motivo mal si adatta allo sviluppo incrementale che presenta la ripetizione di alcune attività." 
+      },
+      {
+         "word":"Riuso",
+         "definition":"Assemblaggio di parti già presistenti, buone e verificate(secondo una best practice). Il riuso può essere occasionale se un semplice copia e incolla di scarso impatto ma è a basso costo, oppure sistematico se si progetta il software in modo tale che le sue componenti siano adattabili, questo comporta un costo iniziale maggiore ma ha maggiore impatto. Progettare per riuso è difficile perchè richiede molta lungimiranza e non sempre è immediato identificare situazioni in cui riusare componenti." 
+      },
+      {
+         "word":"Best Practice",
+         "definition":"Prassi che secondo l'esperienza personale o di studi abbia dimostrato di garantire il miglior risultato in determinate circostanze." 
+      },
+      {
+         "word":"One Shot One Kill",
+         "definition":"Pratica secondo la quale i creatori di SWEky hanno superato l'esame scritto di SWE al primo tentativo." 
+      }
+   ]
+}

@@ -1,0 +1,618 @@
+<h2 class="page-header">Cardin</h2>
+
+<!--********************** D E S I G N  P A T T E R N **********************-->
+
+<h3>Design Pattern</h3>
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#adapter">
+          <h4 class="panel-title">Adapter</h4>
+        </div>
+        <div id="adapter" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Il pattern Adapter converte l'interfaccia di una classe in un'altra. Si può applicare quando si vuole
+utilizzare una classe esistente, ma la sua interfaccia non corrisponde a quella voluta.
+Il pattern Adapter esiste in due varianti.
+				</p>
+				<img src="cardin/adapter.PNG" class="cardinimg"> <br/><br/>
+				<p>
+				<b>Class Adapter</b> <br/>
+				Il Class Adapter utilizza l'ereditarietà multipla per adattare un'interfaccia ad un'altra. <br/>
+				Il Class Adapter adatta Adaptee a Target attraverso una specifica classe concreta Adapter;
+questo non è sufficiente se si vuole adattare una classe e tutte le sue sottoclassi. Per contro,
+però, permette di ridefinire parte del comportamento di Adaptee con il subclassing, e introduce
+solamente un oggetto (Adapter), senza ulteriore indirezione per raggiungere l'oggetto da adattare.
+				</p>
+				<p>
+				<b>Object Adapter</b> <br/>
+				L'Object Adapter utilizza la composizione per adattare un'interfaccia ad
+un'altra. Permette di adattare una classe e tutte le sue sottoclassi, ma rende più difficoltoso
+modificare il comportamento dell'Adaptee.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#abstractfactory">
+          <h4 class="panel-title">Abstract Factory</h4>
+        </div>
+        <div id="abstractfactory" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Il pattern Abstract Factory fornisce un'interfaccia per la creazione di famiglie di oggetti
+					correlati e dipendenti tra loro senza specificare le loro classi concrete. <br/>
+					Il pattern può essere applicato quando: un sistema deve essere indipendente da come i suoi prodotti vengono creati, aggregati e rappresentati; un sistema deve interfacciarsi con molteplici famiglie di prodotti, dotate di interfaccia comune; degli oggetti sono progettati per essere utilizzati insieme, e si vuole imporre tale vincolo; si vuole esporre solo l'interfaccia di un gruppo di oggetti in una libreria di classi.
+				</p>
+				<img src="cardin/afactory.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					Ogni famiglia di prodotti è creata da un'apposita ConcreteFactory, che il codice client accede
+					attraverso l'interfaccia di AbstractFactory. Solitamente, un solo ConcreteFactory viene creato a run-time.
+				</p>
+				<p>
+				<b>Vantaggi</b><br/>
+					Le classi concrete vengono isolate dal client, inoltre è possibile cambiare la configurazione di prodotti semplicemente cambiando la Concrete-Factory che viene istanziata. Infine si può <b>promuove consistenza tra i prodotti, imponendo che oggetti della stessa famiglia vengano
+					usati insieme.</b>
+				</p>
+				<p>
+				<b>Svantaggi</b><br/>
+					Tipicamente, l'interfaccia di AbstractFactory espone una serie di metodi factory
+					che si occupano di costruire ogni oggetto della famiglia. Ogni classe concreta specifica i suoi
+					prodotti definendo l'implementazione di tali metodi. Questa implementazione è semplice, ma ha
+					lo svantaggio di richiedere un una nuova ConcreteFactory e una completa ridefinizione dei metodi
+					factory per ogni famiglia di prodotti, anche se alcune famiglie differiscono tra loro solo in alcuni
+					dettagli. <br/>
+					Un altro svantaggio dell'Abstract Factory sta nella difficoltà di aggiungere nuove classi di
+					prodotti. L'interfaccia di AbstractFactory fissa l'insieme di prodotti che possono essere creati, e
+					aggiungerne di nuovi implica la modifica della classe AbstractFactory e di tutte le ConcreteFactory
+					che la ereditano.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#builder">
+          <h4 class="panel-title">Builder</h4>
+        </div>
+        <div id="builder" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Il pattern Builder serve per separare la costruzione di un oggetto complesso dalla sua rappresentazione, in modo che lo stesso processo di costruzione possa creare diverse rappresentazioni. <br/>
+					Il pattern può essere applicato quando: l'algoritmo di creazione di un oggetto complesso dovrebbe essere indipendente dalle parti che compongono tale oggetto e come esse vengono assemblate; il processo di creazione deve permettere diverse rappresentazioni dell'oggetto che viene creato.
+				</p>
+				<img src="cardin/builder.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					All'utilizzo di un pattern Builder prendono parte diverse entità: un client, un director, un
+					builder astratto, un builder concreto e un product, risultato del processo di creazione.
+					Il Client crea un oggetto Director e lo configura con il builder concreto desiderato. Il Director
+					utilizza tale builder, dietro interfaccia astratta, per costruire il prodotto, che viene restituito
+					dall'oggetto builder concreto al Client.
+				</p>
+				<p>
+					<b>Vantaggi</b><br/>
+					L'interfaccia del Builder parmette di nascondere la rappresentazione e la struttura interna
+					del prodotto, e come esso viene costruito. Per modificare la struttura interna del prodotto,
+					e sufficiente aggiungere un builder; <br/>
+					isola il codice di rappresentazione e costruzione dei prodotti. Gli stessi ConcreteBuilder
+					possono essere utilizzati da più Director; <br/>
+					il Builder costruisce il prodotto step-by-step, permettendo un controllo più fine sul processo di costruzione.
+				</p>
+				<img src="cardin/builderSeq.PNG" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#command">
+          <h4 class="panel-title">Command</h4>
+        </div>
+        <div id="command" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Incapsula una richiesta, un azione o una transazione in un oggetto, permettendo di parametrizzare oggetti con diverse richieste, accodare o loggare richieste, e supportare operazioni annullabili (undo.) <br/>
+					Il pattern command risponde alla necessità di creare richieste a oggetti senza conoscere nulla
+					l'operazione richiesta o il ricevente della richiesta.
+				</p>
+				<img src="cardin/command.PNG" class="cardinimg"> <br/><br/>
+					<p>
+						<b>Collaborazioni</b>
+					</p>
+					<ul>
+						<li> Il client crea un oggetto command concreto e specifica il suo receiver;</li>
+						<li> Un oggetto invoker memorizza l'oggetto command concreto;</li>
+						<li> L'invoker fa una richiesta chiamando il metodo execute del command;</li>
+						<li> Il command concreto invoca operazioni sul receiver per portare a termine la richiesta.</li>
+					</ul>
+
+					<p>
+						<b>Applicabilità</b>
+					</p>
+					<ul>
+						<li> Parametrizzare oggetti con azioni da eseguire (si pensi ad un menuitem, al quale un client
+						esterno può assegnare l'azione da svolgere al click dell'utente.) Command rappresenta
+						l'alternativa object-oriented delle callback procedurali;</li>
+						<li> Specificare, accodare e eseguire richieste in tempi differenti;</li>
+						<li> Supportare operazioni reversibili (undo). L'operazione execute() dell'oggetto Command può
+						memorizzare stato per annullare i suoi effetti all'interno del Command stesso, e offrire un
+						metodo unexecute();</li>
+						<li> Supportare il logging dei cambiamenti in modo da poterli riapplicare in caso di crash del
+						sistema;</li>
+						<li> Supportare transazioni, operazioni ad alto livello costruite su operazioni primitive.</li>
+					</ul>
+
+					<p>
+						<b>Conseguenze</b>
+					</p>
+					<ul>
+						<li> Command disaccoppia l'oggetto che invoca l'operazione da quello che la esegue; </li>
+						<li> I command sono first-class objects, e pertanto sono manipolabili come tali;</li>
+						<li> Più command possono essere assemblati in command composti;</li>
+						<li> L'aggiunta di nuovi command è semplice poiché non è necessaria la modifica di classi già esistenti.</li>
+					</ul>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#decorator">
+          <h4 class="panel-title">Decorator</h4>
+        </div>
+        <div id="decorator" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Talvolta vi è la necessità di aggiungere funzionalità a singoli oggetti, senza modificare la classe
+					di appartenenza. Un modo per farlo è con l'ereditarietà, ma in questo modo la scelta di aggiungere
+					funzionalità è fatta staticamente, e il client non ha modo di controllare tale comportamento.
+					In alcuni casi, il subclassing è poco pratico o irrealizzabile: un numero elevato di estensioni
+					indipendenti tra loro produrrebbe un'esplosione di sottoclassi, per rappresentare ogni possibile
+					combinazione. La classe base potrebbe, inoltre, essere inaccessibile, e quindi non ereditabile.<br/>
+					Un approccio più
+					flessibile consiste nell'incapsulare il componente da estendere in un altro
+					oggetto, che aggiunga la funzionalità. Tale oggetto è chiamato decorator, ed espone la stessa
+					interfaccia del componente che incapsula. Il decorator inoltra le chiamate a metodo al componente,
+					e può eseguire operazioni aggiuntive prima o dopo. Poiché ogni decorator aderisce alla stessa
+					interfaccia, è possibile annidare più decorator ricorsivamente.
+				</p>
+				<img src="cardin/decorator.PNG" class="cardinimg"><br/><br/>
+
+				<p>
+					<b>Vantaggi</b><br/> 
+					Uno dei principali vantaggi del pattern è la 
+					essibilità con cui permette di aggiungere e rimuovere funzionalità a singoli oggetti a run-time. Inoltre, è facile aggiungere più volte la stessa
+					funzionalità (ad esempio, un bordo), attribuendo due volte lo stesso decorator a un componente.<br/>
+					Il decorator permette di aggiungere gradualmente funzionialità agli oggetti: invece che costruire
+					classi grandi e complesse cercando di supportare più funzionalità possibile, che potrebbero in futuro
+					rivelarsi inutili, si possono aggiungere incrementalmente solo quelle necessarie, definendo un nuovo
+					Decorator per ognuna di esse.
+				</p>
+				<p>
+					<b>Svantaggi</b><br/> 
+					Un decorator e il componente incapsulato espongono la medesima interfaccia, ma non
+					sono identici. Non si può fare affidamento all'identità tra oggetti quando vengono usati Decorator.<br/>
+					Un altro svantaggio sta nel fatto una progettazione basata su Decorator spesso risulta in
+					sistemi composti da molti piccoli oggetti simili tra loro. Essi differiscono nel modo in cui sono
+					interconnessi, ma non nelle classi di appartenenza, e possono essere difficili da gestire in fase di
+					debug.
+
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#fmethod">
+          <h4 class="panel-title">Factory Method</h4>
+        </div>
+        <div id="fmethod" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Definisce un'interfaccia per la creazione di un oggetto, lasciando però alle sottoclassi la decisione riguardo a quale classe istanziare. Tramite il Factory Method si fa in modo che una classe possa delegare l'istanziazione di un prodotto alle sue sottoclassi.
+				</p>
+				<img src="cardin/fmethod.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					La classe Product definisce un'interfaccia per gli oggetti che il Factory Method andrà a creare (che non sono famiglie di prodotti distinte come su Abstract Factory), i prodotti sono poi implementati in vari ConcreteProduct. <br/>
+					La classe Creator dichiara invece il metodo <i>FactoryMethod()</i>, che ritorna un oggetto di tipo Product, specificando eventualmente un'implementazione di default di tale metodo che ritorni un ConcreteProduct di default. I ConcreteCreator invece ridefiniscono il <i>FactoryMethod()</i> ritornando un'istanza specifica di ConcreteProduct.
+				</p>
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iterator">
+          <h4 class="panel-title">Iterator</h4>
+        </div>
+        <div id="iterator" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Fornisce una modalità di accesso sequenziale ai singoli elementi di un aggregato di oggetti, ma senza esporne la rappresentazione sottostante.
+				</p>
+				<img src="cardin/iterator.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					La classe Iterator definisce un'interfaccia di accesso e attraversamento degli elementi, ConcreteIterator tiene traccia della posizione corrente di attraversamento, Aggregate definisce l'interfaccia per creare un oggetto Iterator e ConcreteAggregate implementa la creazione dell'iteratore ritornando un'istanza del ConcreteIterator corretto.
+				</p>
+				<p>
+					Iterator va usato quando c'è la necessità di scorrere una struttura come un array, una lista o anche strutture più complesse come alberi e grafi. <br/>
+					L'iterator aiuta a implementare vari metodi di scorrimento della collezione separando la collezione stessa dal suo attraversamento.
+				</p>
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#mvc">
+          <h4 class="panel-title">MVC</h4>
+        </div>
+        <div id="mvc" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Model View Controller è un pattern architetturale che viene usato per dividere business logic e interfaccia. Può essere "push model" se è nativamente implementato in locale o "pull model" se il controller sta su un server.
+				</p>
+				<img src="cardin/MVC.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					MVC prevede sempre l'uso di pattern Observer per far sì che Model, View e Controller reagiscano al cambiamento di stato del programma.
+				</p>
+				<img src="cardin/MVCSeq.PNG" class="cardinimg">
+				<p>
+					Nell'alternativa ModelViewPresenter(MVP) la view è passiva e si limita ad aggiornare la vista, è un'interfaccia di comunicazione. <br/>
+					Nel ModelViewViewModel(MVVM) invece solo la validazione rimane nel modello e il ViewModel rappresenta la proiezione del modello per una vista, con binding a 2 view dunque tra la View e ViewModel.
+				</p>
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#observer">
+          <h4 class="panel-title">Observer</h4>
+        </div>
+        <div id="observer" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Definisce delle dipendenze tra degli oggetti per fare in modo che quando uno di essi cambia stato, tutti quelli in ascolto (da lui dipendenti) siano notificati.
+				</p>
+				<img src="cardin/observer.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					L'Observer promuove una buona programmazione ad oggetti, in quanto il Subject non dipende da nessun tipo particolare di Observer a patto che ciò che viene delegato sia del tipo corretto per tale evento. 
+				</p>
+				<img src="cardin/observerSeq.PNG" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#proxy">
+          <h4 class="panel-title">Proxy</h4>
+        </div>
+        <div id="proxy" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Il pattern Proxy fornisce un surrogato di un altro oggetto per controllarne l'accesso. Esso è
+					applicabile ogni qualvolta vi sia bisogno di un più versatile e sofisticato riferimento ad un oggetto
+					rispetto a un semplice puntatore.
+				</p>
+				<img src="cardin/proxy.PNG" class="cardinimg"> <br/><br/>
+
+				<p>
+					Un proxy è applicabile nelle seguenti situazioni:
+				</p>
+				<ul>				
+					<li> <b>Remote proxy</b>: fornisce un rappresentante in locale di un oggetto in un diverso spazio di
+					indirizzamento;</li>
+					<li> <b>Virtual proxy</b>: crea oggetti complessi e pesanti on-demand;</li>
+					<li> <b>Protection proxy</b>: controlla l'accesso all'oggetto originale;</li>
+					<li> <b>Smart reference</b>: rimpiazza il semplice puntatore per svolgere azioni più avanzate, come il
+					reference counting.</li>
+				</ul>
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#strategy">
+          <h4 class="panel-title">Strategy</h4>
+        </div>
+        <div id="strategy" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Il pattern Strategy è utilizzato quando occorre definire una famiglia di algoritmi e renderli inter-
+					cambiabili, permettendo loro di variare indipendentemente dal client. <br/>
+					Oggetti Strategy possono essere utilizzati per fornire diverse implementazioni di uno stesso
+					algoritmo o comportamento, e il client può scegliere il più appropriato in base ai diversi trade-off
+					di tempo e spazio.
+				</p>
+				<img src="cardin/strategy.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					La classe base comune a tutti gli oggetti Strategy permette di fattorizzare eventuale logica in
+					comune.
+				</p>
+				<p>
+					<b>Vantaggi</b><br/> 
+					La presenza di più comportamenti è modellabile con l'ereditarietà, dove ogni sottoclasse implementa un algoritmo differente per la stessa operazione. In questo modo, però, la
+					sottoclasse è legata staticamente all'algoritmo, e può generare una moltitudine di sottoclasssi che
+					differiscono tra loro solamente per il comportamento. <br/>
+					Il pattern Strategy permette di variare algoritmi diversi dinamicamente, e indipendentemente
+					dal contesto di utilizzo, eliminando il bisogno di statement condizionali per selezionare il comportamento più appropriato.
+				</p>
+				<p>
+					<b>Svantaggi</b><br/> 
+					Il client deve comprendere la differenza tra i diversi Strategy, per selezionare quello
+					più appropriato. Pertanto, tale pattern va utilizzato solamente se la variazione di comportamento
+					è rilevante per il codice client. <br/>
+					Un altro svantaggio riguarda l'incremento del numero di oggetti presenti a runtime conseguente
+					dall'uso del pattern. Tale numero può essere ridotto implementando gli Strategy come oggetti
+					stateless, permettendo a più client di condividere istanze.
+				</p>
+				<p>
+					<b>Implementazione</b><br/> 
+					Tutte le classi rappresentanti uno Strategy devono aderire ad un'interfaccia
+					comune, che deve essere opportunamente progettata. Tale interfaccia deve costituire un efficace
+					punto di accesso dallo Strategy al contesto di utilizzo, e viceversa.<br/>
+					Un possibile approccio consiste nel passare i dati necessari allo Strategy per parametro. Questo
+					permette un basso accoppiamento, ma la presenza di troppi parametri potrebbe fare in modo che
+					alcuni Strategy concreti usino solo parte di essi, facendo istanziare al client oggetti che non verranno
+					utilizzati.<br/>
+					Un'altra possibile implementazione vede il client passare se stesso come parametro allo Strategy,
+					o lo Strategy avere un riferimento al suo client. Questo elimina il bisogno di passare parametri, e il
+					possibile spreco di essi, ma richiede che il client definisca un'interfaccia più elaborata per l'accesso
+					ai suoi dati, aumentando l'accoppiamento tra i due elementi.
+				</p>
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#tmethod">
+          <h4 class="panel-title">Template Method</h4>
+        </div>
+        <div id="tmethod" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Definisce lo scheletro di un algoritmo, delegando alcuni dei passi a sottoclassi. Permette alle
+					sottoclassi di ridefinire alcuni passi di un algoritmo senza cambiarne la struttura.
+				</p>
+				<img src="cardin/tmethod.PNG" class="cardinimg"> <br/><br/>
+				<p>
+					Il pattern si può applicare quando si vuole implementare una sola volta le parti invarianti di un algoritmo, lasciando la ridefinizione delle parti variabili alle sottoclassi, oppure quando si vuole fattorizzare un comportamento comune tra diverse sottoclassi per evitare duplicazione.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+
+
+<!--********************** S O L I D **********************-->
+
+<h3>Principi SOLID</h3>
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#solids">
+          <h4 class="panel-title">Single Responsibility Principle</h4>
+        </div>
+        <div id="solids" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Questo principio è conosciuto anche come <a class="glossar" title="Coesione" id="Coesione" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Coesione')" onclick="miao()">coesione</a> e dice dunque che una classe deve occuparsi solamente di fornire un certo tipo di funzionalità.<br/>
+          Nel caso in cui una classe presenti più responsabilità, ciò può essere risolto inserendo una nuova classe intermedia che divida le responsabilità.<br/>
+          Nella creazione dell'architettura tramite questo principio si perseguono: modularità, affidabilità, riusabilità, semplicità e basso accoppiamento.
+				</p>
+				<img src="cardin/solidS.jpg" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#solido">
+          <h4 class="panel-title">Open Closed Principle</h4>
+        </div>
+        <div id="solido" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Questo principio dice che una classe dovrebbe essere aperta all'estensione ma chiusa al cambiamento.<br/>
+          Per ottenere ciò uno strumento da utilizzare è l'astrazione, definendo metodi virtuali per prevedere l'estensibilità.
+          <br/>
+          Tre principi da perseguire sono: rendere private le variabili, evitare le variabili globali e fare attenzione all'utilizzo di RTTI.
+          <br/>
+          È impossibile ottentere una chiusura completa dell'intero software, dunque nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità e incapsulamento.
+				</p>
+				<img src="cardin/solidO.jpg" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#solidl">
+          <h4 class="panel-title">Liskov Substitution Principle</h4>
+        </div>
+        <div id="solidl" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					Questo principio è alla base della programmazione ad oggetti e implica che dove è presente ereditarietà, le classi derivate possono essere usate al posto della classe base senza dover fare alcuna nuova assunzione.
+          <br/>
+          Violare tale principio implica violare OCP.
+           Per rispettare tale principio è necessario che le precondizioni nella classi derivate siano uguali o più deboli(fanno meno assunzioni), mentre le post condizioni siano uguali o più forti di quelle della classe basi.
+           <br/>
+           Nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità e coesione.
+				</p>
+				<img src="cardin/solidL.jpg" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#solidi">
+          <h4 class="panel-title">Interface Segregation Principle</h4>
+        </div>
+        <div id="solidi" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					   Questo principio esprime la necessità di evitare che delle classi implementino delle interfacce che non usano.
+          <br/>
+          Questo riduce l'accoppiamento ed è ottenuto attraverso la creazione di interfacce più "specializzate" e che siano coese.
+          <br/>
+          Per rispettare questo principio la scelta migliore è utilizzare l'ereditarietà multipla, se disponibile da linguaggio, altrimenti è possibile separare le interfacce delegando l'aggiunta di funzionalità ad un pattern adapter.
+          <br/>
+               Nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità, basso accoppiamento, coesione e riusabilità.
+			</p>
+				<img src="cardin/solidI.jpg" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#solidd">
+          <h4 class="panel-title">Dependency Inversion Principle</h4>
+        </div>
+        <div id="solidd" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+			 Questo principio esprime la necessità di evitare dipendenze dirette tra componenti di alto livello e quelle di basso livello.
+       <br/>
+       Per evitare tale situazione entrambe le componenti devono dipendere da astrazioni che non dipendano a loro volta da implementazioni di dettaglio.
+       <br/>
+       Modi di perseguire tale principio sono l'inserimento delle policy decisionali nei moduli alto livello, l'utilizzo del pattern template method e l'utilizzo di interfacce per ogni livello di architettura.
+
+        <br/>
+            Nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità, basso accoppiamento, coesione, sicurezza rispetto ai malfunzionamenti, semplicità e robustezza.
+		</p>
+				<img src="cardin/solidD.jpg" class="cardinimg">
+          </div>
+        </div>
+</div>
+
+
+
+
+
+
+<h2 class="page-header">Tullio</h2>
+
+<!--********************** S T A N D A R D **********************-->
+
+<h3>Gli standard ISO</h3>
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso12207">
+          <h4 class="panel-title">ISO 12207</h4>
+        </div>
+        <div id="iso12207" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					L'ISO 12207 (Systems and software engineering – Software life cycle processes) fornisce una <b>suddivisione dei processi</b> ad alto livello: i processi primari (acquisizione,fornitura,sviluppo), i processi di supporto(documentazione, <a class="glossar" title="Versionamento" id="Versionamento" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Versionamento')" onclick="miao()">versionamento</a>, verifica e validazione) e processi organizzativi(gestione processi, gestione infrastrutture, miglioramento processi, formazione personale). 
+					<br/>
+					Fornisce inoltre per ogni processo una descrizione delle <a class="glossar" title="Attività" id="Attività" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Attività')" onclick="miao()">attività</a> e dei compiti che lo compongono, fornendo un modello da specializzare in base al ciclo di vita adottato ma con specifiche responsabilità sui processi di cui identifica i prodotti attesi.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso9126">
+          <h4 class="panel-title">ISO/IEC 9126</h4>
+        </div>
+        <div id="iso9126" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					L'ISO 9126 fornisce un modello basato su sette caratteristiche per la valutazione della <b>qualità di prodotto</b>, suddivise in totale in 31 sotto-caratteristiche. Esso si basa su tre tipi di visioni: esterna, interna e in uso. 
+					<br/>
+					Una delle caratteristiche è la qualità in uso, le altre 6 sono interne e esterne e sono funzionalità, affidabilità, <a class="glossar" title="Efficienza" id="Efficienza" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Efficienza')" onclick="miao()">efficienza</a>, usabilità, <a class="glossar" title="Manutenibilità" id="Manutenibilità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Manutenibilità')" onclick="miao()">manutenibilità</a> e portabilità.
+				</p>
+			</div>
+        </div>
+</div>
+
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso14598">
+          <h4 class="panel-title">ISO/IEC 14598</h4>
+        </div>
+        <div id="iso14598" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					L'ISO 14598 fornisce linee guida per l'associazione di una <b>misurazione quantitativa</b>(metrica) ad una data sotto-caratteristica individuata nello standard <b>ISO 9126</b>. 
+					<br/>
+					Se ISO/IEC 9126 definisce un modello della qualità del software, lo standard 14598 descrive il processo di valutazione della qualità del software.
+				</p>
+			</div>
+        </div>
+</div>
+
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso25000">
+          <h4 class="panel-title">ISO/IEC 25000</h4>
+        </div>
+        <div id="iso25000" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					L'ISO 25000 ingloba gli standard 9126 e 14598 in un unico standard chiamato <b>SQuaRE: Software product Quality Requirements and Evaluation</b>.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso9000">
+          <h4 class="panel-title">ISO 9000</h4>
+        </div>
+        <div id="iso9000" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					L'ISO 9000 rappresenta il fondamento per i <b>modelli di qualità dei processi</b> ma resta neutro rispetto al dominio di applicazione, infatti la suddivisione prevista nei processi differisce completamente da quella definita in ISO/IEC 12207.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso9001">
+          <h4 class="panel-title">ISO 9001</h4>
+        </div>
+        <div id="iso9001" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;"> 
+				<p>
+					L'ISO 9001 definisce un <b><a class="glossar" title="Sistema Gestione Qualità" id="Sistema Gestione Qualità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Sistema Gestione Qualità')" onclick="miao()">Sistema Gestione Qualità</a>(SGQ)</b>, calando la visione di ISO 9000 nei sistemi produttivi, introducendo dei requisiti ben specifici. ISO 9001 è anche una certificazione.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso15504">
+          <h4 class="panel-title">ISO/IEC 15504 (SPICE)</h4>
+        </div>
+        <div id="iso15504" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">
+				<p>
+					L'ISO 15504 definito come <b>SPICE (Software Process Improvement Capability dEtermination)</b> è un modello che che va a ricercare il grado di <b>capability</b> dei processi aziendali, in ottica di miglioramento. Individue cinque (più uno) livelli di capability di processo: incomplete (lv. 0), performed, managed, established, predictable, optimizing. 
+					<br/>
+					Su questi livelli sono suddivisi 9 attributi di processo, per ognuno dei quali è associato un livello di raggiungimento tra non raggiunto, parzialmente raggiunto, in gran parte raggiunto e completamente raggiunto.
+				</p>
+          </div>
+        </div>
+</div>
+
+
+<div class="panel panel-default">
+        <div class="panel-heading" data-toggle="collapse" href="#iso15939">
+          <h4 class="panel-title">ISO/IEC 15939</h4>
+        </div>
+        <div id="iso15939" class="panel-collapse collapse">
+          <div class="panel-body docIndex" style="text-align:left;">  
+				<p>
+					L'ISO 15939 fornisce un <b>modello delle misurazioni da produrre</b> e delle relazioni tra esse, descrivendone il processo di misurazione. Questo standard afferma che i bisogni informativi sono basati su obiettivi, vincoli, rischi e problemi che hanno origine dai processi tecnici e di gestione.
+					<br/>
+					Il modello fornito da questo ISO può essere istanziato sulla base di attributi derivanti da altri modelli, ad esempio CMMI.
+				</p>
+          </div>
+        </div>
+</div>
