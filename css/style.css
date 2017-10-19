@@ -509,7 +509,8 @@ blockquote footer {
 }
 
 #footer{
-  height: 2em;
+  padding-top: 0.4em;
+  padding-bottom: 0.4em; 
   width:100%;
   z-index: 1;
   background-color: #212121;
@@ -520,7 +521,6 @@ blockquote footer {
   color: #ffffff;
   font-family: "RobotoRegular";
   font-size: 0.8em;
-  padding: 0.4em;
   margin-bottom: 0;
 }
 
