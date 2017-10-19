@@ -508,6 +508,30 @@ blockquote footer {
     display: none;
 }
 
+#footer{
+  height: 2em;
+  width:100%;
+  z-index: 1;
+  background-color: #212121;
+  text-align: center;
+}
+
+#footerText{
+  color: #ffffff;
+  font-family: "RobotoRegular";
+  font-size: 0.8em;
+  padding: 0.4em;
+  margin-bottom: 0;
+}
+
+#footerText a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+
+
+
 /* MEDIA QUERIES */
 
 @media screen and (max-width:767px){
