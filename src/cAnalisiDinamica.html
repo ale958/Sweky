@@ -42,11 +42,11 @@ Gli errori sono dunque stati del sistema mentre i guasti ne sono la causa. I sis
 <p>
 La strategia nel definire le prove punta a perseguire la quantità minima di test sufficienti a fornire certezza adeguata sulla qualità del prodotto, sfruttando la quantità di sforzo, tempo e risorse allocate per la verifica.
 <br/>
-Lo sforzo non deve comunque essere eccessivo poiché per la legge del rendimento decrescente superata una certa soglia di risorse impiegate, il loro rapporto con i benifici ottenuti non è vantaggioso.
+Lo sforzo non deve comunque essere eccessivo poiché per la legge del rendimento decrescente superata una certa soglia di risorse impiegate, il loro rapporto con i benefici ottenuti non è vantaggioso.
 <br/>
 <br/>
 Dei <b>criteri</b> guida da seguire nella definizione dei test riguardano la classificazione dell'obiettivo della prova, che va specificata per ogni caso di test in termini precisi e quantitativi e va inserita nel <b>Piano di Qualità</b> e
-la definizione di prove che devono essere ripetibili poiché la loro esecusione va effettuata più volte durante l'integrazione di più componenti.
+la definizione di prove che devono essere ripetibili poiché la loro esecuzione va effettuata più volte durante l'integrazione di più componenti.
 <br/>
 Va comunque ricordato che secondo il teorema di Howden non esiste un algoritmo che dato un programma ne individui un set di test finito e ideale.
 </p>
@@ -54,7 +54,7 @@ Va comunque ricordato che secondo il teorema di Howden non esiste un algoritmo c
 <h3>Test</h3>
 <p>
 Come già specificato un test ha lo scopo di far fallire il programma e quando ci riesce deve essere aggiunto quel caso di test alla suite di test del progetto in modo permanente.
-I test non sono sostituitivi delle specifiche del programma,
+I test non sono sostitutivi delle specifiche del programma,
 ma i loro oracoli andrebbero inseriti come commento nel codice in modo da utilizzarli come "contratti" di metodo.
 <br/>
 Una strategia di testing deve prevedere un processo di testing riproducibile e valutabile oggettivamente tramite criteri definiti.
@@ -94,11 +94,11 @@ I test sono definiti e successivamente eseguiti in ordine preciso definito dal m
 I test di <a class="glossar" title="Unità" id="Unità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Unità')" onclick="miao()">unità</a> si occupano di testare le unità software e i relativi moduli e vanno definiti durante la progettazione di dettaglio.
 Circa i 2/3 dei difetti trovati dall'analisi dinamica derivano da questa tipologia di test.
 <br/>
-I test di unità possono essere funzionali(black-box) che facendo riferimento alla specifica dell'unità utlizzano dei dati in ingresso che portino ad un dato comportamento funzionale.
+I test di unità possono essere funzionali(black-box) che facendo riferimento alla specifica dell'unità utilizzano dei dati in ingresso che portino ad un dato comportamento funzionale.
 Per la scelta dei dati in ingresso vengono definite delle classi di equivalenza che raggruppino insiemi di dati che porterebbero al medesimo comportamento.
 <br/>
 
-Da soli i test funzionali non bastano per accertare la correttezza della logica interna e vengono dunque affiancati da test struttrali(white-box).
+Da soli i test funzionali non bastano per accertare la correttezza della logica interna e vengono dunque affiancati da test strutturali(white-box).
 Questi test verificano la logica interna dell'unità cercando di percorrere ogni cammino di esecuzione interno al modulo(massima copertura) e la loro esecuzione può essere facilitata dall'uso di debugger.
 <br/>
 Il testing di unità è completo quando tutte le unità sono state verificate e può portare a diversi livelli di copertura spiegati successivamente.
@@ -124,7 +124,7 @@ In questo modo sono necessari meno <i>stub</i> ma si arriva tardi alle funzional
 In alternativa con l'approccio <b>top-down</b> si parte dalle parti più esterne utilizzando molti <i>stub</i> per simulare le componenti mancanti, integrando cosi subito le funzionalità di alto livello.
 </p>
 
-<h4>Test di sitema</h4>
+<h4>Test di sistema</h4>
 <p>
 I test di sistema sono test funzionali e verificano il comportamento dinamico del sistema nel suo complesso rispetto ai requisiti individuati.
 Essi vengono definiti durante l'analisi dei requisiti ma hanno inizio solo con il completamento dei test di integrazione.
@@ -132,7 +132,7 @@ Essi vengono definiti durante l'analisi dei requisiti ma hanno inizio solo con i
 
 <h4>Test di validazione</h4>
 <p>
-I test di validazione(accettazione/collaudo) acccertano il soddisfacimento dei requisiti richiesti dal proponente.
+I test di validazione(accettazione/collaudo) accertano il soddisfacimento dei requisiti richiesti dal proponente.
 
 Essi possono essere definiti già a partire dal capitolato.
 
@@ -142,7 +142,7 @@ Essi possono essere definiti già a partire dal capitolato.
 <p>
 I test di regressione prevedono la ripetizione selettiva di test di integrazione ed eventualmente di sistema al fine accertare che eventuali modifiche derivanti da correzioni o estensioni del sistema non abbiano introdotto errori. <br/>
 Essi vanno decisi nel
-momento in cui si approvano modifiche al SW ma vanno eseguiti solo in seguito al superamento dei test di unità legati alle componenti coinvolte.
+momento in cui si approvano modifiche al software ma vanno eseguiti solo in seguito al superamento dei test di unità legati alle componenti coinvolte.
 </p>
 
 <h3 id="copertura">Copertura</h3>
@@ -189,7 +189,7 @@ Tramite l'analisi dinamica si può stimare il grado di evoluzione del prodotto, 
 <br/>
 Per perseguire la maturità di prodotto è sconsigliato l'uso di tecniche empiriche come <i>code-n'-fix</i>,
 ma è ideale definire un modello per questa stima.
-Due modelli standard sono quello base e quello logaritmico; il primo prevede un numero di difetti del SW stimato come costante iniziale mentre il secondo assume che le modifiche successive possano introdurre difetti.
+Due modelli standard sono quello base e quello logaritmico; il primo prevede un numero di difetti del software stimato come costante iniziale mentre il secondo assume che le modifiche successive possano introdurre difetti.
 </p>
 <script>
 					$(function(){

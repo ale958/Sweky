@@ -3,7 +3,7 @@
 </h3>
 <p>
 Un software di buona qualità deve possedere tutte le caratteristiche previste e per determinare ciò deve essere verificato il possesso di determinate proprietà di costruzione, d'uso e di funzionamento.
-I costrutti(del linguaggio scelto) da utilizzare per adempiere a tali proprità vanno scelti in base al loro impatto in relazione al costo di verifica.
+I costrutti(del linguaggio scelto) da utilizzare per adempiere a tali proprietà vanno scelti in base al loro impatto in relazione al costo di verifica.
 <br/>
 <b><i>La verifica solo retrospettiva (a valle dello
 sviluppo) è inutile.</i></b>
@@ -20,9 +20,9 @@ la modalità del passaggio dei parametri deve essere coerente con il comportamen
 
 <p>
 La verificabilità di un programma dipende anche da scelte di strutturazione del codice,
-tenendo a mente che più grande è la dimensione del contesto(<i>scope e visibilità</i>) minore è la sua verificabilità, mentre la definzione di una buona architettura facilita la verifica.
+tenendo a mente che più grande è la dimensione del contesto(<i>scope e visibilità</i>) minore è la sua verificabilità, mentre la definizione di una buona architettura facilita la verifica.
 <br/>
-Per ottenere tale risultato è bene separare l'interfaccia dall'implementazione, massimizzare l'incapsulazione che aiuta a restringere lo scope e usare tipi specializzati per i dati tramite composizioni e specializzazioni.
+Per ottenere tale risultato è bene separare l'interfaccia dall'implementazione, massimizzare l'incapsulamento che aiuta a restringere lo scope e usare tipi specializzati per i dati tramite composizioni e specializzazioni.
 L'architettura creata va dunque seguita con attenzione durante la codifica.
 </p>
 <p>
@@ -61,7 +61,7 @@ Di contro, walkthrough richiede maggiore attenzione e un lavoro collaborativo, m
 </p>
 <h3>Tipi di analisi statica</h3>
 <p>
-L'analisi statica costruisce modelli astratti del SW in esame in cui ogni modello rappresenta un programma 
+L'analisi statica costruisce modelli astratti del software in esame in cui ogni modello rappresenta un programma 
 come un grafo diretto e ne studia i possibili cammini mettendo etichette agli archi che descrivono proprietà sintattiche o semantiche dell'istruzione corrispondente.
 Ciascun flusso di controllo(thread) viene rappresentato separatamente assumendo che non interferisca con altri.
 <br/>
@@ -75,7 +75,7 @@ Si accerta che il codice sia ben strutturato ed esegua nella sequenza specificat
 <br/><br/>
 
 <b>2. Analisi di flusso dei dati</b><br/>
-Si accerta che non esistano cammini d'esecusione associati a variabili prive di valore rilevando possibili anomalie nella consistenza dei dati.
+Si accerta che non esistano cammini d'esecuzione associati a variabili prive di valore rilevando possibili anomalie nella consistenza dei dati.
 <br/><br/>
 
 <b>3. Analisi di flusso dell'informazione</b><br/>
@@ -88,7 +88,7 @@ manipolazione algebrica del codice sorgente combinando le tre tecniche precedent
 <br/><br/>
 
 <b>5. Verifica formale del codice</b><br/>
-Fornisce le prove di correttezza del codice sorgente rispetto alla specifica dei requisiti eventualmente in modo parziale suppondendo determinate pre e post condizioni.
+Fornisce le prove di correttezza del codice sorgente rispetto alla specifica dei requisiti eventualmente in modo parziale supponendo determinate pre e post condizioni.
 <br/><br/>
 
 <b>6. Analisi di limite</b><br/>

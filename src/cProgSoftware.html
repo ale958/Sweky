@@ -13,7 +13,7 @@ l'analisi.
 <br/>
 <br/>
 L'<b>obiettivo</b> di una buona progettazione software è il soddisfacimento dei requisiti
-con un sistema di qualità, ottenibile tramite la definizione di una buona archiettura logica del prodotto
+con un sistema di qualità, ottenibile tramite la definizione di una buona architettura logica del prodotto
 che presenti componenti dalle specifiche chiare e coese, che sia realizzabile con risorse e costi fissati e che abbia 
 una struttura che faciliti cambiamenti futuri(manutenibile).
 <br/>
@@ -56,14 +56,14 @@ Inoltre vengono definiti gli strumenti per eseguire le prove di unità.
 SEMAT prevede quattro stati di progresso con cui poter valutare il grado con cui l'architettura è definita e implementata.
 <br/>
 Inizialmente il progresso viene catalogato come <b>architecture selected</b>, 
-dove avviene la selezione delle tecnologie necessarie e delle decisioni archietturali in base ad esse.
+dove avviene la selezione delle tecnologie necessarie e delle decisioni architetturali in base ad esse.
 <br/>
-Una volta dimostrata agli stakeholder la bontà delle scelte architetturali e decise le principali interfacce e configurazioni di sistema l'architettura si attesta 
+Una volta dimostrata agli stakeholders la bontà delle scelte architetturali e decise le principali interfacce e configurazioni di sistema l'architettura si attesta 
 a <b>demonstrable</b>.
 In seguito alla sviluppo dell'architettura scelta, quando il sistema può essere utilizzato dagli utenti e presenta le funzionalità e le prestazioni richieste,
 con una quantità di difetti residui accettabile si raggiunge lo stato di <b>usable</b>.
 <br/>
-Infine al termine della stesura della documentazione e con l'accettazione degli stakeholder del prodotto si raggiunge lo stato 
+Infine al termine della stesura della documentazione e con l'accettazione degli stakeholders del prodotto si raggiunge lo stato 
 <b>ready</b>.
 
 </p>
@@ -77,7 +77,7 @@ nel tempo tramite misurazioni, esse sono:
 </p>
 <ul>
 <li><b>Sufficienza</b>: cioè un sufficiente grado di soddisfacimento dei requisiti;</li>
-<li><b>Comprensibilità</b>: dovrebbe essere compresa dagli stakeholder;</li>
+<li><b>Comprensibilità</b>: dovrebbe essere compresa dagli stakeholders;</li>
 
 
 <li><b>Modularità</b>: buona scomposizione in componenti, parti chiare e distinte tra loro e con compiti non sovrapposti;</li>
@@ -92,7 +92,7 @@ nel tempo tramite misurazioni, esse sono:
 
 <li><b>Affidabilità</b>: è altamente probabile che svolga bene il suo compito;</li>
 
-<li><b>Disponibilità</b>: la manutenzione che blocca l'intero sistema dovrebbe essere breve o nulla, la manutezione di una parte di sistema non deve bloccarlo interamente;</li>
+<li><b>Disponibilità</b>: la manutenzione che blocca l'intero sistema dovrebbe essere breve o nulla, la manutenzione di una parte di sistema non deve bloccarlo interamente;</li>
 
 <li><b>Sicurezza rispetto ai malfunzionamenti</b>: il sistema dispone di un sufficiente grado di ridondanza;</li>
 
@@ -114,7 +114,7 @@ dall'esterno sull'interno e evitando di condividere frammenti di stesse risorse.
 Il grado di accoppiamento è misurabile:
 per ogni componente il numero di archi entranti viene detto <b>fan-in</b> ed è indice
 di utilità e va quindi massimizzato, mentre il numero di archi uscenti viene
- detto <b>fan-out</b> ed indica dipendeza e va quindi minimizzato.
+ detto <b>fan-out</b> ed indica dipendenza e va quindi minimizzato.
 
 </p>
 
@@ -146,7 +146,7 @@ L'approccio più frequentemente seguito è quello intermedio che prende nome di
 
 <h3>Strumenti di supporto</h3>
 <p>
-Alcune scelte di progettazione vengono influenzate dall'uso di particolari framework, che loro volta posono indurre a introdurre 
+Alcune scelte di progettazione vengono influenzate dall'uso di particolari framework, che loro volta possono indurre a introdurre 
 specifici design pattern.
 <br/>
 Un <b>framework</b> è un insieme integrato di componenti software prefabbricate(simili ad una libreria) che forniscono una base facilmente
@@ -170,7 +170,7 @@ ciò può portare a molte richieste per comunicare con livelli non adiacenti;</l
 
 <li><b>Client-server</b>: architettura strutturata a livelli in due macchine distinte che comunicano tramite un protocollo.
 Si può strutturare come <b>fat client</b> la comunicazione con più client porta il server a parlare direttamente con l'applicazione
-e poiché il client possiede di per sè una parte della logica; mentre si parla di <b>thin client</b> se la comunicazione è più ad alto livello e 
+e poiché il client possiede di per sé una parte della logica; mentre si parla di <b>thin client</b> se la comunicazione è più ad alto livello e 
 si ha quindi una buona portabilità ma un carico maggiore sul server.</li>
 
 

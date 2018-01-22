@@ -183,9 +183,9 @@ modificare il comportamento dell'Adaptee.
 				<p>
 					<b>Vantaggi</b><br/> 
 					Uno dei principali vantaggi del pattern è la 
-					essibilità con cui permette di aggiungere e rimuovere funzionalità a singoli oggetti a run-time. Inoltre, è facile aggiungere più volte la stessa
+					flessibilità con cui permette di aggiungere e rimuovere funzionalità a singoli oggetti a run-time. Inoltre, è facile aggiungere più volte la stessa
 					funzionalità (ad esempio, un bordo), attribuendo due volte lo stesso decorator a un componente.<br/>
-					Il decorator permette di aggiungere gradualmente funzionialità agli oggetti: invece che costruire
+					Il decorator permette di aggiungere gradualmente funzionalità agli oggetti: invece che costruire
 					classi grandi e complesse cercando di supportare più funzionalità possibile, che potrebbero in futuro
 					rivelarsi inutili, si possono aggiungere incrementalmente solo quelle necessarie, definendo un nuovo
 					Decorator per ognuna di esse.
@@ -333,7 +333,7 @@ modificare il comportamento dell'Adaptee.
 				<p>
 					<b>Vantaggi</b><br/> 
 					La presenza di più comportamenti è modellabile con l'ereditarietà, dove ogni sottoclasse implementa un algoritmo differente per la stessa operazione. In questo modo, però, la
-					sottoclasse è legata staticamente all'algoritmo, e può generare una moltitudine di sottoclasssi che
+					sottoclasse è legata staticamente all'algoritmo, e può generare una moltitudine di sottoclassi che
 					differiscono tra loro solamente per il comportamento. <br/>
 					Il pattern Strategy permette di variare algoritmi diversi dinamicamente, e indipendentemente
 					dal contesto di utilizzo, eliminando il bisogno di statement condizionali per selezionare il comportamento più appropriato.
@@ -417,7 +417,7 @@ modificare il comportamento dell'Adaptee.
           <br/>
           Tre principi da perseguire sono: rendere private le variabili, evitare le variabili globali e fare attenzione all'utilizzo di RTTI.
           <br/>
-          È impossibile ottentere una chiusura completa dell'intero software, dunque nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità e incapsulamento.
+          È impossibile ottenere una chiusura completa dell'intero software, dunque nella creazione dell'architettura si devono fare scelte strategiche per garantire modularità, flessibilità e incapsulamento.
 				</p>
 				<img src="cardin/solidO.jpg" class="cardinimg">
           </div>
@@ -436,7 +436,7 @@ modificare il comportamento dell'Adaptee.
           Violare tale principio implica violare OCP.
            Per rispettare tale principio è necessario che le precondizioni nella classi derivate siano uguali o più deboli(fanno meno assunzioni), mentre le post condizioni siano uguali o più forti di quelle della classe basi.
            <br/>
-           Nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità e coesione.
+           Nella creazione dell'architettura si devono fare scelte strategiche per garantire modularità, flessibilità e coesione.
 				</p>
 				<img src="cardin/solidL.jpg" class="cardinimg">
           </div>
@@ -456,7 +456,7 @@ modificare il comportamento dell'Adaptee.
           <br/>
           Per rispettare questo principio la scelta migliore è utilizzare l'ereditarietà multipla, se disponibile da linguaggio, altrimenti è possibile separare le interfacce delegando l'aggiunta di funzionalità ad un pattern adapter.
           <br/>
-               Nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità, basso accoppiamento, coesione e riusabilità.
+               Nella creazione dell'architettura si devono fare scelte strategiche per garantire modularità, flessibilità, basso accoppiamento, coesione e riusabilità.
 			</p>
 				<img src="cardin/solidI.jpg" class="cardinimg">
           </div>
@@ -477,7 +477,7 @@ modificare il comportamento dell'Adaptee.
        Modi di perseguire tale principio sono l'inserimento delle policy decisionali nei moduli alto livello, l'utilizzo del pattern template method e l'utilizzo di interfacce per ogni livello di architettura.
 
         <br/>
-            Nella creazione dell'architettura si devono fare scelte strategiche per garatire modularità, flessibilità, basso accoppiamento, coesione, sicurezza rispetto ai malfunzionamenti, semplicità e robustezza.
+            Nella creazione dell'architettura si devono fare scelte strategiche per garantire modularità, flessibilità, basso accoppiamento, coesione, sicurezza rispetto ai malfunzionamenti, semplicità e robustezza.
 		</p>
 				<img src="cardin/solidD.jpg" class="cardinimg">
           </div>
@@ -593,7 +593,7 @@ modificare il comportamento dell'Adaptee.
         <div id="iso15504" class="panel-collapse collapse">
           <div class="panel-body docIndex" style="text-align:left;">
 				<p>
-					L'ISO 15504 definito come <b>SPICE (Software Process Improvement Capability dEtermination)</b> è un modello che che va a ricercare il grado di <b>capability</b> dei processi aziendali, in ottica di miglioramento. Individue cinque (più uno) livelli di capability di processo: incomplete (lv. 0), performed, managed, established, predictable, optimizing. 
+					L'ISO 15504 definito come <b>SPICE (Software Process Improvement Capability dEtermination)</b> è un modello che che va a ricercare il grado di <b>capability</b> dei processi aziendali, in ottica di miglioramento. Individua cinque (più uno) livelli di capability di processo: incomplete (lv. 0), performed, managed, established, predictable, optimizing. 
 					<br/>
 					Su questi livelli sono suddivisi 9 attributi di processo, per ognuno dei quali è associato un livello di raggiungimento tra non raggiunto, parzialmente raggiunto, in gran parte raggiunto e completamente raggiunto.
 				</p>
