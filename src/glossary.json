@@ -2,7 +2,7 @@
    "glossary":[
       {
          "word":"Servizio",
-         "definition":"Mezzo per aiutare l'utente a raggiungere i suoi obiettivi riducendo costi e rischi, ad esempio abattendo le attività non produttive. L'amministratore deve occuparsi dell'erogazione dei servizi di supporto come la fornitura di strumenti adeguati." 
+         "definition":"Mezzo per aiutare l'utente a raggiungere i suoi obiettivi riducendo costi e rischi, ad esempio abbattendo le attività non produttive. L'amministratore deve occuparsi dell'erogazione dei servizi di supporto come la fornitura di strumenti adeguati." 
       },
       {
          "word":"Efficacia",
@@ -30,7 +30,7 @@
       },
       {
          "word":"Coesione",
-         "definition":"Definizione specifica di componenti che presentano correlazione tra loro. La coesione va massimizzata e l'approccio OO aiuta a raggiungere coesione tramite l'applicazione dei principi SOLID. La coesione può essere funzionale se due parti concorrono al medesimo compito, sequenziale se adiacenti per ordine di esecuzione oppure informativa se le parti agiscono sulla stessa unità di informazione." 
+         "definition":"Definizione specifica di componenti che presentano correlazione tra loro. La coesione va massimizzata e l'approccio Orientato agli Oggetti aiuta a raggiungere coesione tramite l'applicazione dei principi SOLID. La coesione può essere funzionale se due parti concorrono al medesimo compito, sequenziale se adiacenti per ordine di esecuzione oppure informativa se le parti agiscono sulla stessa unità di informazione." 
       },
       {
          "word":"Integrazione continua",
@@ -50,7 +50,7 @@
       },
       {
          "word":"Stile architetturale",
-         "definition":"È una collezione di decisioni architettuali prefessitate applicabile ad un determinato contesto di sviluppo ad alto livello, eventualmente influenzando dettagli di architettura di grado più fine. Seguire uno stile architetturale porta in genere a determinate buone qualità nel sistema." 
+         "definition":"È una collezione di decisioni architetturali prefissate applicabile ad un determinato contesto di sviluppo ad alto livello, eventualmente influenzando dettagli di architettura di grado più fine. Seguire uno stile architetturale porta in genere a determinate buone qualità nel sistema." 
       },
       {
          "word":"Accoppiamento",
@@ -66,11 +66,11 @@
       },
       {
          "word":"Unità",
-         "definition":"È un insieme di uno o più moduli(componenti elementari) individuati nella defizioni di un'architettura software come più piccola parte su cui effettuare test. Un'unità si occupa di soddisfare uno o più requisiti(meglio pochi)." 
+         "definition":"È un insieme di uno o più moduli(componenti elementari) individuati nella definizione di un'architettura software come più piccola parte su cui effettuare test. Un'unità si occupa di soddisfare uno o più requisiti(meglio pochi)." 
       },
       {
          "word":"Versionamento",
-         "definition":"È un'attività definita dal controllo di configurazione, cioè le modalità in cui un sistema complesso viene gestito per mettere in sicurezza le baseline e consentire il ritorno a versioni pecedenti. In particolare il versionamento consente tramite un repository di contenere tutti i CI di ogni baseline e la loro storia completa. Una procedura a supporto del versionamento è il commit che qeuivale al tracciamento del completamento di un task a fronte della sua integrazione sul repository." 
+         "definition":"È un'attività definita dal controllo di configurazione, cioè le modalità in cui un sistema complesso viene gestito per mettere in sicurezza le baseline e consentire il ritorno a versioni pecedenti. In particolare il versionamento consente tramite un repository di contenere tutti i CI di ogni baseline e la loro storia completa. Una procedura a supporto del versionamento è il commit che equivale al tracciamento del completamento di un task a fronte della sua integrazione sul repository." 
       },
       {
          "word":"Configuration Item",
@@ -78,11 +78,11 @@
       },
       {
          "word":"Fase",
-         "definition":"È la durata temporale entro uno stato del ciclo di vita o in una trasazione tra essi, durante la quale si svolgono specifiche e univoche attività. Per tale motivo mal si adatta allo sviluppo incrementale che presenta la ripetizione di alcune attività." 
+         "definition":"È la durata temporale entro uno stato del ciclo di vita o in una transizione tra essi, durante la quale si svolgono specifiche e univoche attività. Per tale motivo mal si adatta allo sviluppo incrementale che presenta la ripetizione di alcune attività." 
       },
       {
          "word":"Riuso",
-         "definition":"Assemblaggio di parti già presistenti, buone e verificate(secondo una best practice). Il riuso può essere occasionale se un semplice copia e incolla di scarso impatto ma è a basso costo, oppure sistematico se si progetta il software in modo tale che le sue componenti siano adattabili, questo comporta un costo iniziale maggiore ma ha maggiore impatto. Progettare per riuso è difficile perchè richiede molta lungimiranza e non sempre è immediato identificare situazioni in cui riusare componenti." 
+         "definition":"Assemblaggio di parti già presistenti, buone e verificate(secondo una best practice). Il riuso può essere occasionale se un semplice copia e incolla di scarso impatto ma è a basso costo, oppure sistematico se si progetta il software in modo tale che le sue componenti siano adattabili, questo comporta un costo iniziale maggiore ma ha maggiore impatto. Progettare per riuso è difficile perché richiede molta lungimiranza e non sempre è immediato identificare situazioni in cui riusare componenti." 
       },
       {
          "word":"Best Practice",

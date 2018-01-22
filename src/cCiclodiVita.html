@@ -7,7 +7,7 @@ idealmente è prolungato nel tempo e in cui subisce manutenzione, per poi termin
 L'avanzamento tra questi stati è originato dalle <a class="glossar" title="Attività" id="Attività" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Attività')" onclick="miao()">attività</a> definite dal modello di ciclo di vita scelto,
 esse devono essere coese e raggruppate in processi.
 
-In tali attività è importante identificare dipendeze tra ingressi e uscite e fissarne ordinamento temporale, orientato all'avanzamento.
+In tali attività è importante identificare dipendenze tra ingressi e uscite e fissarne ordinamento temporale, orientato all'avanzamento.
 <br/>
 Un progetto può essere visto come un insieme di fasi che rappresentano la durata temporale entro uno stato di ciclo di vita o in una transizione tra essi.
 
@@ -35,10 +35,10 @@ vita.
  <ul>
  <li>a politica di acquisizione e di sviluppo a 
  livello di sistema;</li>
- <li>più versioni e/o dipendeze con altre componenti del sistema;</li>
+ <li>più versioni e/o dipendenze con altre componenti del sistema;</li>
  <li>la natura, funzione e la sequenza dei processi di revisione richiesti
  al fine della verifica dello stato di avanzamento;</li>
- <li>la necesssità di fornire evidenza preliminare di fattibilità, con sviluppo di prototipi, analisi e studi preliminari all'autorizzazione di 
+ <li>la necessità di fornire evidenza preliminare di fattibilità, con sviluppo di prototipi, analisi e studi preliminari all'autorizzazione di 
  sviluppo;</li>
  <li>'evoluzione del sistema e dei suoi requisiti, identificando così il bisogno di iterazioni e esigenze particolari di configurazione del sistema.</li>
  </ul>
@@ -70,11 +70,11 @@ vita.
 <p><b>Le fasi sono durate temporali con dipendenze
 causali tra loro.</b>
 <br/>
-Tra i difetti principali di questo modello  troviamo l'eccessiva rigidità data dalla stretta sequenzilità tra le fasi
+Tra i difetti principali di questo modello  troviamo l'eccessiva rigidità data dalla stretta sequenzialità tra le fasi
 e da una visione burocratica poco realistica che non ammette modifiche in corso d'opera se non per molta manutenzione.
 
 Per correggere tale rigidità sono stati introdotti dei modelli ibridi di due tipi:
-<b>con prototipazione</b>, che prevede dei prototipi usa e getta per capire meglio i requisiti e <b>con ritorni</b> in cui ogni ciclo di ritorni ragruppa sottosequenze di fasi.
+<b>con prototipazione</b>, che prevede dei prototipi usa e getta per capire meglio i requisiti e <b>con ritorni</b> in cui ogni ciclo di ritorni raggruppa sottosequenze di fasi.
 
 
 </p>
@@ -86,7 +86,7 @@ Per correggere tale rigidità sono stati introdotti dei modelli ibridi di due ti
  onmouseover="getText('Stakeholder')" onclick="miao()">stakeholder</a> in caso ogni aspetto del sistema non sia compreso fin dall'inizio, consentendo maggiore capacità
 	di adattamento ma comporta rischio di non convergenza poiché ogni iterazione comporta un ritorno all'indietro nel tempo.<br/>
 	Dunque le iterazioni possono essere distruttive e l'approccio migliore sarebbe decomporre la realizzazione del sistema, identificando le componenti più
-	ciritiche in modo di limitare superiormente il numero delle iterazioni. 
+	critiche in modo di limitare superiormente il numero delle iterazioni. 
 	<br/><br/>
 
 	Gli incrementi invece consentono di non rimandare l'integrazione tra le parti del sistema alla fine, ma di integrare per volta piccole parti 
@@ -171,7 +171,7 @@ Gli incrementi successivi raffinano ed estendono l'analisi e la progettazione co
 
  <p>Prevede l’integrazione di componenti già implementati, massimizzando il <a class="glossar" title="Riuso" id="Riuso" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Riuso')" onclick="miao()">riuso</a> sistematico di componenti.
  L’idea nasce dal fatto che molto di quel che ci serve fare è già stato fatto e molto di quel che faremo ci potrà servire ancora. 
-Richiede una progettazione incentrata al riuso, analizzando anche ciò che ho già a disposizione e eventualmente negozionado i requisiti per sfruttare 
+Richiede una progettazione incentrata al riuso, analizzando anche ciò che ho già a disposizione e eventualmente negoziando i requisiti per sfruttare 
 tali componenti.
  
 	 </p>
@@ -181,14 +181,14 @@ tali componenti.
   <p>Si tratta di modelli altamente dinamici, con cicli iterativi e incrementali, basati su principi fondanti per svincolarsi dall'eccessiva rigidità.
 I principi fondanti sono: le persone e le interazioni sono più importanti rispetto ai processi e agli strumenti,  molto più importante il software rispetto alla documentazione ed è molto più importante rispondere al cambiamento anziché agire secondo un piano.
 <br/>
-L'idea base per implemetare tali principi e l'user story, ossia un compito significativo che l'utente vuole svolgere con il SW richiesto.
-Il lavoro viene quindi suddiviso in piccoli incrementi a valore aggiunto che vengono sviluppati indipendetemente in una sequenza continua dall'analisi all'integrazione.
+L'idea base per implementare tali principi e l'user story, ossia un compito significativo che l'utente vuole svolgere con il software richiesto.
+Il lavoro viene quindi suddiviso in piccoli incrementi a valore aggiunto che vengono sviluppati indipendentemente in una sequenza continua dall'analisi all'integrazione.
 <br/><br/>
 Come obbiettivi strategici ci sono: la possibilità di dimostrare in ogni momento al cliente ciò che è stato fatto, verificare l'avanzamento tramite il progresso reale,
 motivare gli sviluppatori con risultati immediati e  assicurare una buona verifica e integrazione dell'intero prodotto software.
 <br/>
 <br/>
-Un esempio molto utilizzato è lo SCRUM, dove viene creato e mantenuto un bakclog, un "mucchio" di piccoli task da svolgere.
+Un esempio molto utilizzato è lo SCRUM, dove viene creato e mantenuto un backlog, un "mucchio" di piccoli task da svolgere.
 La persona incaricata di questo deve essere esperta e preparata e viene chiamata <b>product owner</b> e deve organizzare anche degli sprint, cioè dei periodi
 di tempo brevi in cui una parte di questi task vengono discussi e assegnati ai programmatori.
 In Scrum vi è la figura dello Scrum master : esso ha la responsabilità di facilitare e gestire
@@ -196,7 +196,7 @@ i meeting, tracciare il backlog, misurare il progresso e comunicare con i client
 È responsabile di tutto il processo di Scrum. Ad ogni modo, tutto il team ha potere
 decisionale.
 <br/>
-Lo sprint è preferibilmente breve, poichè periodi prolungati hanno esito incerto.
+Lo sprint è preferibilmente breve, poiché periodi prolungati hanno esito incerto.
 I task sono compiti che può portare a termine una singola persona, i cui incrementi apportati sono sempre funzionanti (compilano).<br/>
 Durante gli sprint vengono tenuti degli incontri quotidiani al fine di monitorare lo stato di avanzamento, mentre al suo termine se ne esegue
 una revisione critica mettendo eventualmente in discussione il backlog iniziale.
