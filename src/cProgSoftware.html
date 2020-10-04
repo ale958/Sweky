@@ -1,188 +1,236 @@
 <h2 class="page-header">Progettazione Software</h2>
 <h3>Definizione</h3>
 <p>
-Una volta individuato in modo chiaro il problema tramite l'ingegneria dei requisiti(approccio analitico),
-il compito di trovare la soluzione per risolvere il problema nel modo più corretto è compito della progettazione software(approccio sintetico).
-<br/>
-La progettazione ricerca una soluzione soddisfacente per tutti gli  <a class="glossar" title="Stakeholder" id="Stakeholder" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo"
- onmouseover="getText('Stakeholder')" onclick="miao()">stakeholder</a>,
-andando a produrre l'architettura e i suoi modelli
- logici senza l'ausilio del codice.
-La progettazione ha dunque il compito di assicurare il soddisfacimento delle caratteristiche individuate per il prodotto durante
-l'analisi.
-<br/>
-<br/>
-L'<b>obiettivo</b> di una buona progettazione software è il soddisfacimento dei requisiti
-con un sistema di qualità, ottenibile tramite la definizione di una buona architettura logica del prodotto
-che presenti componenti dalle specifiche chiare e coese, che sia realizzabile con risorse e costi fissati e che abbia 
-una struttura che faciliti cambiamenti futuri(manutenibile).
-<br/>
-Per dominare la complessità del sistema conviene scomporlo in componenti via via meno complessi, fermando la decomposizione una volta 
-arrivati a componenti che abbiano complessità trattabile da un singolo individuo.
-<br/>
-<br/>
-Importante è saper riconoscere quando terminare tale scomposizione per non occorrere in orchestrazioni tra componenti
-troppo complesse e che farebbero annullare i benefici di tale scomposizione.
+    Una volta individuato in modo chiaro il problema tramite l'ingegneria dei requisiti (approccio analitico),
+    il compito di trovare la soluzione per risolvere il problema nel modo più corretto è compito della progettazione
+    software (approccio sintetico).
+    <br/>
+    La progettazione ricerca una soluzione soddisfacente per tutti gli <a class="glossar" title="Stakeholder"
+                                                                          id="Stakeholder" tabindex="0" role="button"
+                                                                          data-toggle="popover" data-trigger="focus"
+                                                                          data-content="Da mobile clicca di nuovo"
+                                                                          onmouseover="getText('Stakeholder')"
+                                                                          onclick="miao()">stakeholder</a>,
+    andando a produrre l'architettura e i suoi modelli logici senza l'ausilio del codice.
+    La progettazione ha dunque il compito di assicurare il soddisfacimento delle caratteristiche individuate per il
+    prodotto durante l'analisi.
+    <br/>
+    <br/>
+    L'<b>obiettivo</b> di una buona progettazione software è il soddisfacimento dei requisiti con un sistema di qualità,
+    ottenibile tramite la definizione di una buona architettura logica del prodotto che presenti componenti dalle
+    specifiche chiare e coese, che sia realizzabile con risorse e costi fissati e che abbia una struttura che faciliti
+    cambiamenti futuri (manutenibile).
+    <br/>
+    Per dominare la complessità del sistema conviene scomporlo in componenti via via meno complessi, fermando la
+    decomposizione una volta arrivati a componenti che abbiano complessità trattabile da un singolo individuo.
+    <br/>
+    <br/>
+    Importante è saper riconoscere quando terminare tale scomposizione per non occorrere in orchestrazioni tra
+    componenti troppo complesse e che farebbero annullare i benefici di tale scomposizione.
 </p>
 
 <blockquote>
-L'architettura software è l’organizzazione di base di un sistema, espressa dai suoi
-componenti, dalle relazioni tra di loro e con l’ambiente, e i principi
-che ne guidano il progetto e l’evoluzione
-<footer>ISO/IEC/IEEE 42010:2011, Systems
-and software engineering — Architecture description</footer>
+    L'architettura software è l’organizzazione di base di un sistema, espressa dai suoi componenti, dalle relazioni tra
+    di loro e con l’ambiente, e i principi che ne guidano il progetto e l’evoluzione
+    <footer>ISO/IEC/IEEE 42010:2011, Systems
+        and software engineering — Architecture description
+    </footer>
 </blockquote>
 
 <p>
-Tipicamente l'architettura di un software è un <b>sistema</b>
-formato da <b>componenti</b>, che raggruppano delle <b><a class="glossar" title="Unità" id="Unità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Unità')" onclick="miao()">unità</a></b> che a loro volta raggruppano
-<b>moduli</b>(carico di lavoro da assegnare ad un singolo).
-<br/>
-Acronimo di tale suddivisione è <b>SCUM</b>.
-<br/>
-Per perseguire coerenza e consistenza nell'architettura è consigliato l'uso di 
-<a class="glossar" title="Stile architetturale" id="Stile architetturale" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Stile architetturale')" onclick="miao()">stili architetturali</a>,
-che forniscono una soluzione progettuale di alto livello, specificando poi la progettazione di dettaglio mediante l'uso di design pattern appropriati.
-<br/>
-La progettazione di dettaglio si occupa di assegnare le unità a componenti per organizzare il lavoro di programmazione,
-producendo della documentazione che possa disciplinare 
-la programmazione, tracciando i requisiti alle unità
-e definendo le configurazioni ammissibili del sistema.
-Inoltre vengono definiti gli strumenti per eseguire le prove di unità.
+    Tipicamente l'architettura di un software è un <b>sistema</b>formato da <b>componenti</b>, che raggruppano delle
+    <b><a class="glossar" title="Unità" id="Unità" tabindex="0"
+          role="button" data-toggle="popover" data-trigger="focus"
+          data-content="Da mobile clicca di nuovo"
+          onmouseover="getText('Unità')" onclick="miao()">unità</a></b>
+    che a loro volta raggruppano <b>moduli</b>(carico di lavoro da assegnare ad un singolo).
+    <br/>
+    Acronimo di tale suddivisione è <b>SCUM</b>.
+    <br/>
+    Per perseguire coerenza e consistenza nell'architettura è consigliato l'uso di
+    <a class="glossar" title="Stile architetturale" id="Stile architetturale" tabindex="0" role="button"
+       data-toggle="popover" data-trigger="focus" data-content="Da mobile clicca di nuovo"
+       onmouseover="getText('Stile architetturale')" onclick="miao()">stili architetturali</a>, che forniscono una
+    soluzione progettuale di alto livello, specificando poi la progettazione di dettaglio mediante l'uso di design
+    pattern appropriati.
+    <br/>
+    La progettazione di dettaglio si occupa di assegnare le unità a componenti per organizzare il lavoro di
+    programmazione, producendo della documentazione che possa disciplinare la programmazione, tracciando i requisiti
+    alle unità e definendo le configurazioni ammissibili del sistema.
+    Inoltre vengono definiti gli strumenti per eseguire le prove di unità.
 </p>
 
 <h4>SEMAT</h4>
 <p>
-SEMAT prevede quattro stati di progresso con cui poter valutare il grado con cui l'architettura è definita e implementata.
-<br/>
-Inizialmente il progresso viene catalogato come <b>architecture selected</b>, 
-dove avviene la selezione delle tecnologie necessarie e delle decisioni architetturali in base ad esse.
-<br/>
-Una volta dimostrata agli stakeholders la bontà delle scelte architetturali e decise le principali interfacce e configurazioni di sistema l'architettura si attesta 
-a <b>demonstrable</b>.
-In seguito alla sviluppo dell'architettura scelta, quando il sistema può essere utilizzato dagli utenti e presenta le funzionalità e le prestazioni richieste,
-con una quantità di difetti residui accettabile si raggiunge lo stato di <b>usable</b>.
-<br/>
-Infine al termine della stesura della documentazione e con l'accettazione degli stakeholders del prodotto si raggiunge lo stato 
-<b>ready</b>.
-
+    SEMAT prevede quattro stati di progresso con cui poter valutare il grado con cui l'architettura è definita e
+    implementata.
+    <br/>
+    Inizialmente il progresso viene catalogato come <b>architecture selected</b>, dove avviene la selezione delle
+    tecnologie necessarie e delle decisioni architetturali in base ad esse.
+    <br/>
+    Una volta dimostrata agli stakeholders la bontà delle scelte architetturali e decise le principali interfacce e
+    configurazioni di sistema l'architettura si attesta a <b>demonstrable</b>.
+    In seguito alla sviluppo dell'architettura scelta, quando il sistema può essere utilizzato dagli utenti e presenta
+    le funzionalità e le prestazioni richieste, con una quantità di difetti residui accettabile si raggiunge lo stato di
+    <b>usable</b>.
+    <br/>
+    Infine al termine della stesura della documentazione e con l'accettazione degli stakeholders del prodotto si
+    raggiunge lo stato<b>ready</b>.
 </p>
-
-
 
 <h3>Qualità di architettura</h3>
 <p>
-Le qualità che generalmente dovrebbe avere una buona architettura dovrebbero essere misurabili, in modo da poter evidenziare cambiamenti
-nel tempo tramite misurazioni, esse sono:
+    Le qualità che generalmente dovrebbe avere una buona architettura dovrebbero essere misurabili, in modo da poter
+    evidenziare cambiamenti nel tempo tramite misurazioni, esse sono:
 </p>
 <ul>
-<li><b>Sufficienza</b>: cioè un sufficiente grado di soddisfacimento dei requisiti;</li>
-<li><b>Comprensibilità</b>: dovrebbe essere compresa dagli stakeholders;</li>
+    <li><b>Sufficienza</b>: cioè un sufficiente grado di soddisfacimento dei requisiti;</li>
+    <li><b>Comprensibilità</b>: dovrebbe essere compresa dagli stakeholders;</li>
 
 
-<li><b>Modularità</b>: buona scomposizione in componenti, parti chiare e distinte tra loro e con compiti non sovrapposti;</li>
+    <li>
+        <b>Modularità</b>: buona scomposizione in componenti, parti chiare e distinte tra loro e con compiti non
+        sovrapposti;
+    </li>
 
-<li><b>Robustezza</b>: gestione di diverse classi di input(anche non previste);</li>
+    <li><b>Robustezza</b>: gestione di diverse classi di input(anche non previste);</li>
 
-<li><b>Flessibilità</b>: che permetta facile manutenzione sia adattativa che evolutiva;</li>
+    <li><b>Flessibilità</b>: che permetta facile manutenzione sia adattativa che evolutiva;</li>
 
-<li><b>Riusabilità</b>: sia pensata anche per il <a class="glossar" title="Riuso" id="Riuso" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Riuso')" onclick="miao()">riuso</a> e con il riuso di componenti;</li>
+    <li>
+        <b>Riusabilità</b>: sia pensata anche per il <a class="glossar" title="Riuso" id="Riuso" tabindex="0"
+                                                        role="button" data-toggle="popover" data-trigger="focus"
+                                                        data-content="Da mobile clicca di nuovo"
+                                                        onmouseover="getText('Riuso')" onclick="miao()">riuso</a> e con
+        il riuso di componenti;
+    </li>
 
-<li><b><a class="glossar" title="Efficienza" id="efficienza" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Efficienza')" onclick="miao()">Efficienza</a></b>;</li>
+    <li><b><a class="glossar" title="Efficienza" id="efficienza" tabindex="0" role="button" data-toggle="popover"
+              data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Efficienza')"
+              onclick="miao()">Efficienza</a></b>;
+    </li>
 
-<li><b>Affidabilità</b>: è altamente probabile che svolga bene il suo compito;</li>
+    <li><b>Affidabilità</b>: è altamente probabile che svolga bene il suo compito;</li>
 
-<li><b>Disponibilità</b>: la manutenzione che blocca l'intero sistema dovrebbe essere breve o nulla, la manutenzione di una parte di sistema non deve bloccarlo interamente;</li>
+    <li>
+        <b>Disponibilità</b>: la manutenzione che blocca l'intero sistema dovrebbe essere breve o nulla, la manutenzione
+        di una parte di sistema non deve bloccarlo interamente;
+    </li>
 
-<li><b>Sicurezza rispetto ai malfunzionamenti</b>: il sistema dispone di un sufficiente grado di ridondanza;</li>
+    <li><b>Sicurezza rispetto ai malfunzionamenti</b>: il sistema dispone di un sufficiente grado di ridondanza;</li>
 
-<li><b>Sicurezza rispetto a intrusioni</b>: protezione dei dati del sistema;</li>
-<li><b>Semplicità</b>: caratteristica riferita alla complessità dell'architettura;</li>
-<li><b>Incapsulamento</b>: alcune volte nascondere i dettagli implementativi(black box) può portare a benefici come diminuzione di dipendenze e aumento di riuso, a volte accresce anche la <a class="glossar" title="Manutenibilità" id="Manutenibilità" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Manutenibilità')" onclick="miao()">manutenibilità</a>;</li>
-<li><b><a class="glossar" title="Coesione" id="Coesione" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Coesione')" onclick="miao()">Coesione</a></b>: parti associate concorrono agli stessi obiettivi;</li>
+    <li><b>Sicurezza rispetto a intrusioni</b>: protezione dei dati del sistema;</li>
+    <li><b>Semplicità</b>: caratteristica riferita alla complessità dell'architettura;</li>
+    <li>
+        <b>Incapsulamento</b>: alcune volte nascondere i dettagli implementativi(black box) può portare a benefici come
+        diminuzione di dipendenze e aumento di riuso, a volte accresce anche la <a class="glossar"
+                                                                                   title="Manutenibilità"
+                                                                                   id="Manutenibilità" tabindex="0"
+                                                                                   role="button" data-toggle="popover"
+                                                                                   data-trigger="focus"
+                                                                                   data-content="Da mobile clicca di nuovo"
+                                                                                   onmouseover="getText('Manutenibilità')"
+                                                                                   onclick="miao()">manutenibilità</a>;
+    </li>
+    <li>
+        <b><a class="glossar" title="Coesione" id="Coesione" tabindex="0" role="button" data-toggle="popover"
+              data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Coesione')"
+              onclick="miao()">Coesione</a></b>: parti associate concorrono agli stessi obiettivi;
+    </li>
 
-<li><b>Basso <a class="glossar" title="Accoppiamento" id="Accoppiamento" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Accoppiamento')" onclick="miao()">Accoppiamento</a></b>: parti distinte dipendono
- il meno possibile le une dalle altre.</li>
+    <li>
+        <b>Basso <a class="glossar" title="Accoppiamento" id="Accoppiamento" tabindex="0" role="button"
+                    data-toggle="popover" data-trigger="focus" data-content="Da mobile clicca di nuovo"
+                    onmouseover="getText('Accoppiamento')" onclick="miao()">Accoppiamento</a></b>: parti distinte
+        dipendono il meno possibile le une dalle altre.
+    </li>
 
 </ul>
 <p>
-In particolare l'accoppiamento tra le componenti 
-va minimizzato, per fare ciò spesso si può far interagire tra loro
-le componenti tramite interfacce, evitando cosi di fare assunzioni
-dall'esterno sull'interno e evitando di condividere frammenti di stesse risorse.
-<br/>
-Il grado di accoppiamento è misurabile:
-per ogni componente il numero di archi entranti viene detto <b>fan-in</b> ed è indice
-di utilità e va quindi massimizzato, mentre il numero di archi uscenti viene
- detto <b>fan-out</b> ed indica dipendenza e va quindi minimizzato.
-
+    In particolare l'accoppiamento tra le componenti va minimizzato, per fare ciò spesso si può far interagire tra loro
+    le componenti tramite interfacce, evitando cosi di fare assunzioni dall'esterno sull'interno e evitando di
+    condividere frammenti di stesse risorse.
+    <br/>
+    Il grado di accoppiamento è misurabile:
+    per ogni componente il numero di archi entranti viene detto <b>fan-in</b> ed è indice di utilità e va quindi
+    massimizzato, mentre il numero di archi uscenti viene detto <b>fan-out</b> ed indica dipendenza e va quindi
+    minimizzato.
 </p>
 
-
 <h3>
-Stili di progettazione architetturale
+    Stili di progettazione architetturale
 </h3>
 <p>
-Nell'approcciarsi alla progettazione architetturale si possono seguire tre diversi stili
-di progettazione:
-lo stile funzionale(top-down) prevede la decomposizione di problemi
-partendo dalle funzionalità di alto livello e scendendo poi nel dettaglio, ogni parte del sistema viene poi rifinita fino ad ottenere
-una specifica sufficientemente completa da validare il modello.
-<br/>
-Nello stile object-oriented(bottom-up) invece vengono prima individuate 
-le parti del sistema in dettaglio e poi connesse tra loro in modo 
-da formare componenti più grandi, fino alla realizzazione dell'intero sistema.<br/>
-Questo approccio 
-privilegia la codifica e una <a class="glossar" title="Fase" id="Fase" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo"
- onmouseover="getText('Fase')" onclick="miao()">fase</a> di test precoce, che può iniziare 
-appena il primo modulo è stato specificato.
-<br/>
-Uno dei principali vantaggi dell'uso dell'approccio bottom-up
-è la riusabilità.
-<br/>
-L'approccio più frequentemente seguito è quello intermedio che prende nome di
-<b>meet-in-the-middle</b> che permette maggiore flessibilità.
+    Nell'approcciarsi alla progettazione architetturale si possono seguire tre diversi stili di progettazione:
+    lo stile funzionale(top-down) prevede la decomposizione di problemi partendo dalle funzionalità di alto livello e
+    scendendo poi nel dettaglio, ogni parte del sistema viene poi rifinita fino ad ottenere una specifica
+    sufficientemente completa da validare il modello.
+    <br/>
+    Nello stile object-oriented(bottom-up) invece vengono prima individuate le parti del sistema in dettaglio e poi
+    connesse tra loro in modo da formare componenti più grandi, fino alla realizzazione dell'intero sistema.<br/>
+    Questo approccio privilegia la codifica e una <a class="glossar" title="Fase" id="Fase" tabindex="0" role="button"
+                                                     data-toggle="popover" data-trigger="focus"
+                                                     data-content="Da mobile clicca di nuovo"
+                                                     onmouseover="getText('Fase')" onclick="miao()">fase</a> di test
+    precoce, che può iniziare appena il primo modulo è stato specificato.
+    <br/>
+    Uno dei principali vantaggi dell'uso dell'approccio bottom-up è la riusabilità.
+    <br/>
+    L'approccio più frequentemente seguito è quello intermedio che prende nome di<b>meet-in-the-middle</b> che permette
+    maggiore flessibilità.
 </p>
 
 <h3>Strumenti di supporto</h3>
 <p>
-Alcune scelte di progettazione vengono influenzate dall'uso di particolari framework, che loro volta possono indurre a introdurre 
-specifici design pattern.
-<br/>
-Un <b>framework</b> è un insieme integrato di componenti software prefabbricate(simili ad una libreria) che forniscono una base facilmente
-riusabile per una grande varietà di applicazioni in un dato dominio.
-Forniscono un approccio <b>bottom-up</b> perché sono costituiti da codice già fatto, quindi già specificato in dettaglio, ma anche un approccio <b>top-down</b>
-poiché a volte impongono stili architetturali.
-<br/>
-Un <b>design pattern</b> costituisce una soluzione progettuale di riconosciuta bontà ad un problema ricorrente lasciando comunque un certo grado di libertà
-di progettazione.
-<br/>
-In particolare per la progettazione del sistema esistono dei pattern architetturali, di cui i più comuni sono:
+    Alcune scelte di progettazione vengono influenzate dall'uso di particolari framework, che loro volta possono indurre
+    a introdurre specifici design pattern.
+    <br/>
+    Un <b>framework</b> è un insieme integrato di componenti software prefabbricate(simili ad una libreria) che
+    forniscono una base facilmente riusabile per una grande varietà di applicazioni in un dato dominio.
+    Forniscono un approccio <b>bottom-up</b> perché sono costituiti da codice già fatto, quindi già specificato in
+    dettaglio, ma anche un approccio <b>top-down</b> poiché a volte impongono stili architetturali.
+    <br/>
+    Un <b>design pattern</b> costituisce una soluzione progettuale di riconosciuta bontà ad un problema ricorrente
+    lasciando comunque un certo grado di libertà di progettazione.
+    <br/>
+    In particolare per la progettazione del sistema esistono dei pattern architetturali, di cui i più comuni sono:
 </p>
 <ul>
-<li><b>A livelli</b>: l'architettura viene suddivisa in più livelli con responsabilità distinte e delle interazioni definite.
-Di particolare utilizzo è quella a tre livelli che suddivide il livello di presentazione, il livello di logica operativa e quello di dati persistenti. I livelli possono anche essere più numerosi come avviene nella pila OSI e 
-ciò può portare a molte richieste per comunicare con livelli non adiacenti;</li>
+    <li>
+        <b>A livelli</b>: l'architettura viene suddivisa in più livelli con responsabilità distinte e delle interazioni
+        definite.
+        Di particolare utilizzo è quella a tre livelli che suddivide il livello di presentazione, il livello di logica
+        operativa e quello di dati persistenti. I livelli possono anche essere più numerosi come avviene nella pila OSI
+        e ciò può portare a molte richieste per comunicare con livelli non adiacenti;
+    </li>
 
 
-<li><b>Produttore-consumatore</b>: consiste nella collaborazione a pipeline con utilizzo di una coda;</li>
+    <li><b>Produttore-consumatore</b>: consiste nella collaborazione a pipeline con utilizzo di una coda;</li>
 
 
-<li><b>Client-server</b>: architettura strutturata a livelli in due macchine distinte che comunicano tramite un protocollo.
-Si può strutturare come <b>fat client</b> la comunicazione con più client porta il server a parlare direttamente con l'applicazione
-e poiché il client possiede di per sé una parte della logica; mentre si parla di <b>thin client</b> se la comunicazione è più ad alto livello e 
-si ha quindi una buona portabilità ma un carico maggiore sul server.</li>
+    <li>
+        <b>Client-server</b>: architettura strutturata a livelli in due macchine distinte che comunicano tramite un
+        protocollo.
+        Si può strutturare come <b>fat client</b> la comunicazione con più client porta il server a parlare direttamente
+        con l'applicazione e poiché il client possiede di per sé una parte della logica; mentre si parla di
+        <b>thin client</b> se la comunicazione è più ad alto livello e si ha quindi una buona portabilità ma un carico
+        maggiore sul server.
+    </li>
 
 
-<li><b>Peer-to-peer</b>: architettura che prevedere la connessione tra varie macchine che comunicano tra loro senza bisogno di un server intermedio.</li>
+    <li>
+        <b>Peer-to-peer</b>: architettura che prevedere la connessione tra varie macchine che comunicano tra loro senza
+        bisogno di un server intermedio.
+    </li>
 
 </ul>
 
 
 <script>
-					$(function(){
-						$("[data-toggle=popover]").popover();
-					});
+    $(function () {
+        $("[data-toggle=popover]").popover();
+    });
 </script>
 
-<iframe width="100%" height="500" allowfullscreen frameborder="0" src="https://bubbl.us/NDE1NTc2Ny84MTg0ODk4Lzg5ZDM2MWUzYTUxNjFkMjlhZDczOTUyNmRhZDIwNzEw-X?utm_source=page-embed&utm_medium=link&s=8184898"></iframe>
+<iframe width="100%" height="500" allowfullscreen frameborder="0"
+        src="https://bubbl.us/NDE1NTc2Ny84MTg0ODk4Lzg5ZDM2MWUzYTUxNjFkMjlhZDczOTUyNmRhZDIwNzEw-X?utm_source=page-embed&utm_medium=link&s=8184898"></iframe>

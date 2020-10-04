@@ -1,214 +1,273 @@
 <h2 class="page-header">Ciclo di vita</h2>
 <p>
-La durata del ciclo di vita di un software va dalla sua concezione, 
-cioè il momento in cui nasce l'idea o il bisogno (processo di acquisizione), passa poi per sviluppo e utilizzo, che
-idealmente è prolungato nel tempo e in cui subisce manutenzione, per poi terminare con il ritiro del prodotto.
+    La durata del ciclo di vita di un software va dalla sua concezione,
+    cioè il momento in cui nasce l'idea o il bisogno (processo di acquisizione), passa poi per sviluppo e utilizzo, che
+    idealmente è prolungato nel tempo e in cui subisce manutenzione, per poi terminare con il ritiro del prodotto.
 
-L'avanzamento tra questi stati è originato dalle <a class="glossar" title="Attività" id="Attività" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Attività')" onclick="miao()">attività</a> definite dal modello di ciclo di vita scelto,
-esse devono essere coese e raggruppate in processi.
+    L'avanzamento tra questi stati è originato dalle <a class="glossar" title="Attività" id="Attività" tabindex="0"
+                                                        role="button" data-toggle="popover" data-trigger="focus"
+                                                        data-content="Da mobile clicca di nuovo"
+                                                        onmouseover="getText('Attività')" onclick="miao()">attività</a>
+    definite dal modello di ciclo di vita scelto, esse devono essere coese e raggruppate in processi.
 
-In tali attività è importante identificare dipendenze tra ingressi e uscite e fissarne ordinamento temporale, orientato all'avanzamento.
-<br/>
-Un progetto può essere visto come un insieme di fasi che rappresentano la durata temporale entro uno stato di ciclo di vita o in una transizione tra essi.
+    In tali attività è importante identificare dipendenze tra ingressi e uscite e fissarne ordinamento temporale,
+    orientato all'avanzamento.
+    <br/>
+    Un progetto può essere visto come un insieme di fasi che rappresentano la durata temporale entro uno stato di ciclo
+    di vita o in una transizione tra essi.
 
 
 </p>
- 
 
- <h3>Gestione di progetto</h3>
- <p>
- La scelta del modello di ciclo di vita da adottare va fatta precedere dalla pianificazione e dalla gestione del progetto poiché le vincola,
- rimanendo però indipendete da strumenti e metodi di sviluppo.
- <br/>
- Il modello di ciclo di vita
-fornisce le relazioni temporali e logiche tra i processi, rispetto agli stati di ciclo di
-vita.
- Molto importante è un'analisi preventiva del modello da scegliere poiché da esso dipende la stima dei costi, dei tempi, di obblighi e benefici associati al progetto.
- <br/>
- L'adozione di un modello richiede un sistema di qualità per garantire conformità e maturità alle attese, con misurazioni in quanto i modelli di ciclo di vita aiutano a perseguire la quantificabilità.
- 
- </p>
- <h3>Scelta del modello</h3>
- <p>
- I fattori critici nella scelta del modello di ciclo di vita sono: 
- </p>
- <ul>
- <li>la politica di acquisizione e di sviluppo a 
- livello di sistema;</li>
- <li>più versioni e/o dipendenze con altre componenti del sistema;</li>
- <li>la natura, funzione e la sequenza dei processi di revisione richiesti
- al fine della verifica dello stato di avanzamento;</li>
- <li>la necessità di fornire evidenza preliminare di fattibilità, con sviluppo di prototipi, analisi e studi preliminari all'autorizzazione di 
- sviluppo;</li>
- <li>'evoluzione del sistema e dei suoi requisiti, identificando così il bisogno di iterazioni e esigenze particolari di configurazione del sistema.</li>
- </ul>
- <p>
 
- L'esigenza di definire dei modelli di cicli di vita nasce al fine di evitare il "code-'n-fix" che viene adottato in progetti caotici, non gestibili.
- </p>
- 
- <p class="lead"><b>Sequenziale, detto a cascata</b></p>
- <p>
-	 Questo modello prevedere una definizione di fasi strettamente sequenziali, distinte e non sovrapposte nel tempo, senza la possibilità di ritorni a 
-	 fasi precedenti.
-	 <br/>
-	 Ogni <a class="glossar" title="Fase" id="Fase" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo"
- onmouseover="getText('Fase')" onclick="miao()">fase</a> è caratterizzata da precondizioni e postcondizioni definite, che devono essere dimostrate prima dai prodotti documentali 
-	 (l'approvazione dei documenti è necessaria per l'avvio di una fase successiva) e poi software.
-	 Può essere adatto allo sviluppo di sistemi complessi a livello organizzativo e eventi inaspettati implicano ripartire dall'inizio.
-	 <br/>
-	 Ogni fase viene definita in termini di: 
-	 
-  </p>
-  <ul>
-		<li>Attività previste e prodotti attesi in ingresso e in uscita</li>
-		<li>Contenuti e struttura dei documenti</li>
-		<li>Responsabilità e ruoli coinvolti</li>
-		<li>Scadenze di consegna dei documenti</li>
-	</ul>
+<h3>Gestione di progetto</h3>
+<p>
+    La scelta del modello di ciclo di vita da adottare va fatta precedere dalla pianificazione e dalla gestione del
+    progetto poiché le vincola, rimanendo però indipendente da strumenti e metodi di sviluppo.
+    <br/>
+    Il modello di ciclo di vita fornisce le relazioni temporali e logiche tra i processi, rispetto agli stati di ciclo
+    di
+    vita.
+    Molto importante è un'analisi preventiva del modello da scegliere poiché da esso dipende la stima dei costi, dei
+    tempi, di obblighi e benefici associati al progetto.
+    <br/>
+    L'adozione di un modello richiede un sistema di qualità per garantire conformità e maturità alle attese, con
+    misurazioni in quanto i modelli di ciclo di vita aiutano a perseguire la quantificabilità.
 
-<p><b>Le fasi sono durate temporali con dipendenze
-causali tra loro.</b>
-<br/>
-Tra i difetti principali di questo modello  troviamo l'eccessiva rigidità data dalla stretta sequenzialità tra le fasi
-e da una visione burocratica poco realistica che non ammette modifiche in corso d'opera se non per molta manutenzione.
+</p>
+<h3>Scelta del modello</h3>
+<p>
+    I fattori critici nella scelta del modello di ciclo di vita sono:
+</p>
+<ul>
+    <li>la politica di acquisizione e di sviluppo a livello di sistema;
+    </li>
+    <li>più versioni e/o dipendenze con altre componenti del sistema;</li>
+    <li>la natura, funzione e la sequenza dei processi di revisione richiesti al fine della verifica dello stato di
+        avanzamento;
+    </li>
+    <li>la necessità di fornire evidenza preliminare di fattibilità, con sviluppo di prototipi, analisi e studi
+        preliminari all'autorizzazione di sviluppo;
+    </li>
+    <li>l'evoluzione del sistema e dei suoi requisiti, identificando così il bisogno di iterazioni e esigenze particolari
+        di configurazione del sistema.
+    </li>
+</ul>
+<p>
 
-Per correggere tale rigidità sono stati introdotti dei modelli ibridi di due tipi:
-<b>con prototipazione</b>, che prevede dei prototipi usa e getta per capire meglio i requisiti e <b>con ritorni</b> in cui ogni ciclo di ritorni raggruppa sottosequenze di fasi.
+    L'esigenza di definire dei modelli di cicli di vita nasce al fine di evitare il "code-'n-fix" che viene adottato in
+    progetti caotici, non gestibili.
+</p>
+
+<p class="lead"><b>Sequenziale, detto a cascata</b></p>
+<p>
+    Questo modello prevedere una definizione di fasi strettamente sequenziali, distinte e non sovrapposte nel tempo,
+    senza la possibilità di ritorni a
+    fasi precedenti.
+    <br/>
+    Ogni <a class="glossar" title="Fase" id="Fase" tabindex="0" role="button" data-toggle="popover" data-trigger="focus"
+            data-content="Da mobile clicca di nuovo"
+            onmouseover="getText('Fase')" onclick="miao()">fase</a> è caratterizzata da precondizioni e postcondizioni
+    definite, che devono essere dimostrate prima dai prodotti documentali
+    (l'approvazione dei documenti è necessaria per l'avvio di una fase successiva) e poi software.
+    Può essere adatto allo sviluppo di sistemi complessi a livello organizzativo e eventi inaspettati implicano
+    ripartire dall'inizio.
+    <br/>
+    Ogni fase viene definita in termini di:
+
+</p>
+<ul>
+    <li>Attività previste e prodotti attesi in ingresso e in uscita</li>
+    <li>Contenuti e struttura dei documenti</li>
+    <li>Responsabilità e ruoli coinvolti</li>
+    <li>Scadenze di consegna dei documenti</li>
+</ul>
+
+<p><b>Le fasi sono durate temporali con dipendenze causali tra loro.</b>
+    <br/>
+    Tra i difetti principali di questo modello troviamo l'eccessiva rigidità data dalla stretta sequenzialità tra le
+    fasi e da una visione burocratica poco realistica che non ammette modifiche in corso d'opera se non per molta
+    manutenzione.
+
+    Per correggere tale rigidità sono stati introdotti dei modelli ibridi di due tipi:
+    <b>con prototipazione</b>, che prevede dei prototipi usa e getta per capire meglio i requisiti e <b>con ritorni</b>
+    in cui ogni ciclo di ritorni raggruppa sottosequenze di fasi.
 
 
 </p>
 <img src="./img/sequenziale.jpg" width="100%">
- <h4>Incremento vs Iterazione</h4>
- <p>
-	L'inserimento di ritorni in un progetto può essere di tipo iterativo o incrementale.
-	Un'iterazione aiuta il dialogo con gli  <a class="glossar" title="Stakeholder" id="Stakeholder" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo"
- onmouseover="getText('Stakeholder')" onclick="miao()">stakeholder</a> in caso ogni aspetto del sistema non sia compreso fin dall'inizio, consentendo maggiore capacità
-	di adattamento ma comporta rischio di non convergenza poiché ogni iterazione comporta un ritorno all'indietro nel tempo.<br/>
-	Dunque le iterazioni possono essere distruttive e l'approccio migliore sarebbe decomporre la realizzazione del sistema, identificando le componenti più
-	critiche in modo di limitare superiormente il numero delle iterazioni. 
-	<br/><br/>
-
-	Gli incrementi invece consentono di non rimandare l'integrazione tra le parti del sistema alla fine, ma di integrare per volta piccole parti 
-	al fine di produrre valore ad ogni incremento.
-	Per tale motivo un insieme non vuoto di funzionalità è presto disponibile e i primi incrementi si possono sfruttare come prototipi 
-	per fissare meglio i requisiti, riducendo il rischio di <a class="glossar" title="Fallimento" id="Fallimento" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo"
- onmouseover="getText('Fallimento')" onclick="miao()">fallimento</a>.
-	Questo è dovuto al fatto che le funzionalità principali sono sviluppate per prime e attraversano quindi più fasi di verifica.
-	Un'iterazione coincide con un incremento se il suo unico effetto è raffinare il prodotto senza ulteriori impatti sulle altre parti del sistema.
-	  </p>
- <p class="lead"><b>Incrementale</b></p>
-  <p>
-In questo modello i cicli non sono più iterazioni ma incrementi; 
-  ogni incremento attraversa tutte le fasi del modello sequenziale, dall’analisi alla veriﬁca 
-  (anche se, nella variante principale Staged Delivery, l’analisi e la progettazione si affrontano all’inizio e non vengono più ripetute).
-<br/>
-  Il modello prevede rilasci multipli realizzando un incremento di funzionalità e avvicinandosi sempre più alle attese.
-  Un grande vantaggio è che le funzionalità più importanti vengono trattate per prime; così facendo, queste vengono veriﬁcate più volte 
-  (dato che ogni ciclo prevede la veriﬁca del software).
-<br/>  Ogni incremento ha il vantaggio di ridurre il rischio di fallimento, con un approccio più realistico e predisposto ai cambiamenti. 
-  Difatti, mentre il modello sequenziale segue un approccio predittivo (cioè basato su piani che devono essere rispettati),
-  il modello incrementale segue un approccio <b>adattativo</b>, dove la realtà è considerata imprevedibile. 
-  <br/><br/>
-
-  Sarebbe preferibile un approccio predittivo, che permette di stimare con precisione una data di consegna e un preventivo;
-  tuttavia l’approccio adattativo può essere conveniente in uno scenario in cui i requisiti cambiano in corso d’opera. 
-	   </p>
-	<p>
-	<b>Schema generale</b><br/>
-	La prima cosa da fare è comprendere il problema e definire i contorni dei requisiti, assegnando poi i requisiti agli incrementi, bisogna quindi pensare ad una sequenza che idealmente porti verso una buona soluzione e converga.
-	Si passa dunque alla progettazione dell'architettura di massima del sistema, finita la quale si inizia un incremento con modifica alla progettazione di dettaglio e inizio della codifica.
-	Si passa dunque a validare l'incremento controllando che esso soddisfi i requisiti ad esso associati e si integra eventualmente a quanto era già stato prodotto.
-	Si valida quindi il sistema e poi si torna a sviluppare il prossimo incremento fino a quando il sistema non raggiunge il suo stato finale.
-
-	</p>
-	
-<img src="./img/incrementale.jpg"width="100%">
- <p class="lead"><b>Evolutivo</b></p>
- <p>Il modello evolutivo, che è incrementale, prevede un'analisi preliminare per identificare requisiti e architettura di massima
-e pianificare la realizzazione evolutiva.
-Gli incrementi successivi raffinano ed estendono l'analisi e la progettazione con il rilascio di versioni(prototipi) usabili dal cliente. 
- Più versioni posso essere mantenute in parallelo e ogni fase ammette iterazioni multiple. 
-	  </p>
-	  	<p>
-	<b>Schema generale</b><br/>
-	La prima cosa da fare è un'analisi preliminare per identificare i requisiti di massima, un'architettura di massima e pianificare i passi di analisi successivi per la realizzazione evolutiva.
-	Per ogni evoluzione viene eseguito un raffinamento e un'estensione dell'analisi dalla quale si procede a progettazione, codifica e integrazione.
-	Vengono dunque rilasciati dei prototipi fino ad arrivare all'accettazione finale.
-	</p>
-	
-<img src="./img/evolutivo.jpg"width="100%">
- <p class="lead"><b>Spirale</b></p>
-   <p>
-   Nel 1988 Barry Boehm propose il modello a spirale, che introduce il concetto di "rischio di progetto",  
-	ponendo grande attenzione sugli aspetti gestionali tramite pianificazione delle fasi e analisi dei rischi.
-	
-   Lo sviluppo procede a cicli inizialmente rapidi ma via via sempre più lenti; 
-   difatti i cicli esterni della spirale sono così lenti che possono aderire, ognuno, ad un diverso modello di ciclo di vita. 
-   Ad ogni ciclo si analizzano i rischi e si compiono simulazioni. Misura del successo di un progetto è il diametro della spirale. 
-   Un ciclo si articola generalmente in quattro momenti:
-</>
-<ul>
-<li>definizione degli obiettivi con esplorazione delle alternative;</li>
-
-<li>analisi dei rischi con studio delle conseguenze e valutazione delle alternative individuate
-   tramite prototipi e simulazioni;</li>
-
-<li>sviluppo e validazione per la realizzazione del prodotto;</li>
-
-<li>pianificazione con decisioni riguardo al proseguimento del progetto.</li>
-
-</ul>
-  
-
+<h4>Incremento vs Iterazione</h4>
 <p>
-   Questo modello viene usato solo da chi intraprende progetti sperimentali, che nessuno ha mai realizzato, e richiede forte interazione tra committente e fornitore. 
- 
-	    </p>
+    L'inserimento di ritorni in un progetto può essere di tipo iterativo o incrementale.
+    Un'iterazione aiuta il dialogo con gli <a class="glossar" title="Stakeholder" id="Stakeholder" tabindex="0"
+                                              role="button" data-toggle="popover" data-trigger="focus"
+                                              data-content="Da mobile clicca di nuovo"
+                                              onmouseover="getText('Stakeholder')" onclick="miao()">stakeholder</a> in
+    caso ogni aspetto del sistema non sia compreso fin dall'inizio, consentendo maggiore capacità
+    di adattamento ma comporta rischio di non convergenza poiché ogni iterazione comporta un ritorno all'indietro nel
+    tempo.<br/>
+    Dunque le iterazioni possono essere distruttive e l'approccio migliore sarebbe decomporre la realizzazione del
+    sistema, identificando le componenti più critiche in modo di limitare superiormente il numero delle iterazioni.
+    <br/><br/>
 
-<img src="./img/spirale.jpg" width="100%">	
- <p class="lead"><b>A componenti</b></p>
+    Gli incrementi invece consentono di non rimandare l'integrazione tra le parti del sistema alla fine, ma di integrare
+    per volta piccole parti al fine di produrre valore ad ogni incremento.
+    Per tale motivo un insieme non vuoto di funzionalità è presto disponibile e i primi incrementi si possono sfruttare
+    come prototipi per fissare meglio i requisiti, riducendo il rischio di <a class="glossar" title="Fallimento" id="Fallimento"
+                                                               tabindex="0" role="button" data-toggle="popover"
+                                                               data-trigger="focus"
+                                                               data-content="Da mobile clicca di nuovo"
+                                                               onmouseover="getText('Fallimento')" onclick="miao()">fallimento</a>.
+    Questo è dovuto al fatto che le funzionalità principali sono sviluppate per prime e attraversano quindi più fasi di
+    verifica.
+    Un'iterazione coincide con un incremento se il suo unico effetto è raffinare il prodotto senza ulteriori impatti
+    sulle altre parti del sistema.
+</p>
+<p class="lead"><b>Incrementale</b></p>
+<p>
+    In questo modello i cicli non sono più iterazioni ma incrementi;
+    ogni incremento attraversa tutte le fasi del modello sequenziale, dall’analisi alla veriﬁca
+    (anche se, nella variante principale Staged Delivery, l’analisi e la progettazione si affrontano all’inizio e non
+    vengono più ripetute).
+    <br/>
+    Il modello prevede rilasci multipli realizzando un incremento di funzionalità e avvicinandosi sempre più alle
+    attese.
+    Un grande vantaggio è che le funzionalità più importanti vengono trattate per prime; così facendo, queste vengono
+    veriﬁcate più volte (dato che ogni ciclo prevede la veriﬁca del software).
+    <br/> Ogni incremento ha il vantaggio di ridurre il rischio di fallimento, con un approccio più realistico e
+    predisposto ai cambiamenti.
+    Difatti, mentre il modello sequenziale segue un approccio predittivo (cioè basato su piani che devono essere
+    rispettati),
+    il modello incrementale segue un approccio <b>adattativo</b>, dove la realtà è considerata imprevedibile.
+    <br/><br/>
 
- <p>Prevede l’integrazione di componenti già implementati, massimizzando il <a class="glossar" title="Riuso" id="Riuso" tabindex="0" role="button" data-toggle="popover"  data-trigger="focus" data-content="Da mobile clicca di nuovo" onmouseover="getText('Riuso')" onclick="miao()">riuso</a> sistematico di componenti.
- L’idea nasce dal fatto che molto di quel che ci serve fare è già stato fatto e molto di quel che faremo ci potrà servire ancora. 
-Richiede una progettazione incentrata al riuso, analizzando anche ciò che ho già a disposizione e eventualmente negoziando i requisiti per sfruttare 
-tali componenti.
- 
-	 </p>
-	 
-<img src="./img/componenti.jpg" width="100%">
- <p class="lead"><b>Agile</b></p>
-  <p>Si tratta di modelli altamente dinamici, con cicli iterativi e incrementali, basati su principi fondanti per svincolarsi dall'eccessiva rigidità.
-I principi fondanti sono: le persone e le interazioni sono più importanti rispetto ai processi e agli strumenti,  molto più importante il software rispetto alla documentazione ed è molto più importante rispondere al cambiamento anziché agire secondo un piano.
-<br/>
-L'idea base per implementare tali principi &egrave; l'user story, ossia un compito significativo che l'utente vuole svolgere con il software richiesto.
-Il lavoro viene quindi suddiviso in piccoli incrementi a valore aggiunto che vengono sviluppati indipendentemente in una sequenza continua dall'analisi all'integrazione.
-<br/><br/>
-Come obiettivi strategici ci sono: la possibilità di dimostrare in ogni momento al cliente ciò che è stato fatto, verificare l'avanzamento tramite il progresso reale,
-motivare gli sviluppatori con risultati immediati e  assicurare una buona verifica e integrazione dell'intero prodotto software.
-<br/>
-<br/>
-Un esempio molto utilizzato è lo SCRUM, dove viene creato e mantenuto un backlog, un "mucchio" di piccoli task da svolgere.
-La persona incaricata di questo deve essere esperta e preparata e viene chiamata <b>product owner</b> e deve organizzare anche degli sprint, cioè dei periodi
-di tempo brevi in cui una parte di questi task vengono discussi e assegnati ai programmatori.
-In Scrum vi è la figura dello Scrum master : esso ha la responsabilità di facilitare e gestire
-i meeting, tracciare il backlog, misurare il progresso e comunicare con i clienti e il management.
-È responsabile di tutto il processo di Scrum. Ad ogni modo, tutto il team ha potere
-decisionale.
-<br/>
-Lo sprint è preferibilmente breve, poiché periodi prolungati hanno esito incerto.
-I task sono compiti che può portare a termine una singola persona, i cui incrementi apportati sono sempre funzionanti (compilano).<br/>
-Durante gli sprint vengono tenuti degli incontri quotidiani al fine di monitorare lo stato di avanzamento, mentre al suo termine se ne esegue
-una revisione critica mettendo eventualmente in discussione il backlog iniziale.
+    Sarebbe preferibile un approccio predittivo, che permette di stimare con precisione una data di consegna e un
+    preventivo;
+    tuttavia l’approccio adattativo può essere conveniente in uno scenario in cui i requisiti cambiano in corso d’opera.
+</p>
+<p>
+    <b>Schema generale</b><br/>
+    La prima cosa da fare è comprendere il problema e definire i contorni dei requisiti, assegnando poi i requisiti agli
+    incrementi, bisogna quindi pensare ad una sequenza che idealmente porti verso una buona soluzione e converga.
+    Si passa dunque alla progettazione dell'architettura di massima del sistema, finita la quale si inizia un incremento
+    con modifica alla progettazione di dettaglio e inizio della codifica.
+    Si passa dunque a validare l'incremento controllando che esso soddisfi i requisiti ad esso associati e si integra
+    eventualmente a quanto era già stato prodotto.
+    Si valida quindi il sistema e poi si torna a sviluppare il prossimo incremento fino a quando il sistema non
+    raggiunge il suo stato finale.
 
 </p>
 
+<img src="./img/incrementale.jpg" width="100%">
+<p class="lead"><b>Evolutivo</b></p>
+<p>Il modello evolutivo, che è incrementale, prevede un'analisi preliminare per identificare requisiti e architettura di
+    massima
+    e pianificare la realizzazione evolutiva.
+    Gli incrementi successivi raffinano ed estendono l'analisi e la progettazione con il rilascio di versioni(prototipi)
+    usabili dal cliente.
+    Più versioni posso essere mantenute in parallelo e ogni fase ammette iterazioni multiple.
+</p>
+<p>
+    <b>Schema generale</b><br/>
+    La prima cosa da fare è un'analisi preliminare per identificare i requisiti di massima, un'architettura di massima e
+    pianificare i passi di analisi successivi per la realizzazione evolutiva.
+    Per ogni evoluzione viene eseguito un raffinamento e un'estensione dell'analisi dalla quale si procede a
+    progettazione, codifica e integrazione.
+    Vengono dunque rilasciati dei prototipi fino ad arrivare all'accettazione finale.
+</p>
+
+<img src="./img/evolutivo.jpg" width="100%">
+<p class="lead"><b>Spirale</b></p>
+<p>
+    Nel 1988 Barry Boehm propose il modello a spirale, che introduce il concetto di "rischio di progetto",
+    ponendo grande attenzione sugli aspetti gestionali tramite pianificazione delle fasi e analisi dei rischi.
+
+    Lo sviluppo procede a cicli inizialmente rapidi ma via via sempre più lenti;
+    difatti i cicli esterni della spirale sono così lenti che possono aderire, ognuno, ad un diverso modello di ciclo di
+    vita.
+    Ad ogni ciclo si analizzano i rischi e si compiono simulazioni. Misura del successo di un progetto è il diametro
+    della spirale.
+    Un ciclo si articola generalmente in quattro momenti:
+</>
+<ul>
+    <li>definizione degli obiettivi con esplorazione delle alternative;</li>
+
+    <li>analisi dei rischi con studio delle conseguenze e valutazione delle alternative individuate
+        tramite prototipi e simulazioni;
+    </li>
+
+    <li>sviluppo e validazione per la realizzazione del prodotto;</li>
+
+    <li>pianificazione con decisioni riguardo al proseguimento del progetto.</li>
+
+</ul>
+
+
+<p>
+    Questo modello viene usato solo da chi intraprende progetti sperimentali, che nessuno ha mai realizzato, e richiede
+    forte interazione tra committente e fornitore.
+
+</p>
+
+<img src="./img/spirale.jpg" width="100%">
+<p class="lead"><b>A componenti</b></p>
+
+<p>Prevede l’integrazione di componenti già implementati, massimizzando il <a class="glossar" title="Riuso" id="Riuso"
+                                                                              tabindex="0" role="button"
+                                                                              data-toggle="popover" data-trigger="focus"
+                                                                              data-content="Da mobile clicca di nuovo"
+                                                                              onmouseover="getText('Riuso')"
+                                                                              onclick="miao()">riuso</a> sistematico di
+    componenti.
+    L’idea nasce dal fatto che molto di quel che ci serve fare è già stato fatto e molto di quel che faremo ci potrà
+    servire ancora.
+    Richiede una progettazione incentrata al riuso, analizzando anche ciò che ho già a disposizione e eventualmente
+    negoziando i requisiti per sfruttare
+    tali componenti.
+
+</p>
+
+<img src="./img/componenti.jpg" width="100%">
+<p class="lead"><b>Agile</b></p>
+<p>Si tratta di modelli altamente dinamici, con cicli iterativi e incrementali, basati su principi fondanti per
+    svincolarsi dall'eccessiva rigidità.
+    I principi fondanti sono: le persone e le interazioni sono più importanti rispetto ai processi e agli strumenti,
+    molto più importante il software rispetto alla documentazione ed è molto più importante rispondere al cambiamento
+    anziché agire secondo un piano.
+    <br/>
+    L'idea base per implementare tali principi &egrave; l'user story, ossia un compito significativo che l'utente vuole
+    svolgere con il software richiesto.
+    Il lavoro viene quindi suddiviso in piccoli incrementi a valore aggiunto che vengono sviluppati indipendentemente in
+    una sequenza continua dall'analisi all'integrazione.
+    <br/><br/>
+    Come obiettivi strategici ci sono: la possibilità di dimostrare in ogni momento al cliente ciò che è stato fatto,
+    verificare l'avanzamento tramite il progresso reale, motivare gli sviluppatori con risultati immediati e assicurare
+    una buona verifica e integrazione dell'intero prodotto software.
+    <br/>
+    <br/>
+    Un esempio molto utilizzato è lo SCRUM, dove viene creato e mantenuto un backlog, un "mucchio" di piccoli task da
+    svolgere.
+    La persona incaricata di questo deve essere esperta e preparata e viene chiamata <b>product owner</b> e deve
+    organizzare anche degli sprint, cioè dei periodi di tempo brevi in cui una parte di questi task vengono discussi e
+    assegnati ai programmatori.
+    In Scrum vi è la figura dello Scrum master : esso ha la responsabilità di facilitare e gestire i meeting, tracciare
+    il backlog, misurare il progresso e comunicare con i clienti e il management.
+    È responsabile di tutto il processo di Scrum. Ad ogni modo, tutto il team ha potere decisionale.
+    <br/>
+    Lo sprint è preferibilmente breve, poiché periodi prolungati hanno esito incerto.
+    I task sono compiti che può portare a termine una singola persona, i cui incrementi apportati sono sempre
+    funzionanti (compilano).<br/>
+    Durante gli sprint vengono tenuti degli incontri quotidiani al fine di monitorare lo stato di avanzamento, mentre al
+    suo termine se ne esegue una revisione critica mettendo eventualmente in discussione il backlog iniziale.
+
+</p>
 
 <script>
-					$(function(){
-						$("[data-toggle=popover]").popover();
-					});
+    $(function () {
+        $("[data-toggle=popover]").popover();
+    });
 </script>
 
 <img src="./img/scrum.jpg" style="margin-bottom: 10%;" width="100%">
-<iframe width="100%" height="500" allowfullscreen frameborder="0" src="https://bubbl.us/NDE0Nzg5Ny84MTgzMjY2LzVkNzExZjRiMTUzOGIyZjM2YTIwMGVjN2ZmNmQwZmY1-X?utm_source=page-embed&utm_medium=link&s=8183266"></iframe>
+<iframe width="100%" height="500" allowfullscreen frameborder="0"
+        src="https://bubbl.us/NDE0Nzg5Ny84MTgzMjY2LzVkNzExZjRiMTUzOGIyZjM2YTIwMGVjN2ZmNmQwZmY1-X?utm_source=page-embed&utm_medium=link&s=8183266"></iframe>
