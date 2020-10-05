@@ -6,7 +6,7 @@
       },
       {
          "word":"Efficacia",
-         "definition":"Grado di conformità del prodotto rispetto alle norme vigenti e agli obiettivi prefissati. Per perseguire una buona efficacia è necessario impiegare sufficienti risorse. La strategia con la quale il fornitore garantisce la conformità viene fissato nel Piano di Qualifica." 
+         "definition":"Grado di conformità del prodotto rispetto alle norme vigenti e agli obiettivi prefissati. Per perseguire una buona efficacia è necessario impiegare sufficienti risorse. La strategia con la quale il fornitore garantisce la conformità viene fissata nel Piano di Qualifica." 
       },
       {
          "word":"Efficienza",
@@ -34,7 +34,7 @@
       },
       {
          "word":"Integrazione continua",
-         "definition":"È una pratica che consiste nell'allineare frequentemente lo stato dell'ambiente di lavoro condiviso, controllando che le modifiche apportate non vadano ad intaccare la baseline tramite la definizione di test automatici eseguiti ad ogni commit(Jenkins)." 
+         "definition":"È una pratica che consiste nell'allineare frequentemente lo stato dell'ambiente di lavoro condiviso, controllando che le modifiche apportate non vadano ad intaccare la baseline tramite la definizione di test automatici eseguiti ad ogni commit (Jenkins)." 
       },
       {
          "word":"Milestone",
@@ -66,7 +66,7 @@
       },
       {
          "word":"Unità",
-         "definition":"È un insieme di uno o più moduli(componenti elementari) individuati nella definizione di un'architettura software come più piccola parte su cui effettuare test. Un'unità si occupa di soddisfare uno o più requisiti(meglio pochi)." 
+         "definition":"È un insieme di uno o più moduli (componenti elementari) individuati nella definizione di un'architettura software come più piccola parte su cui effettuare test. Un'unità si occupa di soddisfare uno o più requisiti(meglio pochi)." 
       },
       {
          "word":"Versionamento",
@@ -82,7 +82,7 @@
       },
       {
          "word":"Riuso",
-         "definition":"Assemblaggio di parti già presistenti, buone e verificate(secondo una best practice). Il riuso può essere occasionale se un semplice copia e incolla di scarso impatto ma è a basso costo, oppure sistematico se si progetta il software in modo tale che le sue componenti siano adattabili, questo comporta un costo iniziale maggiore ma ha maggiore impatto. Progettare per riuso è difficile perché richiede molta lungimiranza e non sempre è immediato identificare situazioni in cui riusare componenti." 
+         "definition":"Assemblaggio di parti già presistenti, buone e verificate (secondo una best practice). Il riuso può essere occasionale se un semplice copia e incolla di scarso impatto ma è a basso costo, oppure sistematico se si progetta il software in modo tale che le sue componenti siano adattabili, questo comporta un costo iniziale maggiore ma ha maggiore impatto. Progettare per riuso è difficile perché richiede molta lungimiranza e non sempre è immediato identificare situazioni in cui riusare componenti." 
       },
       {
          "word":"Best Practice",
